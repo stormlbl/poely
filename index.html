@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>POELY · WK-poule '26</title>
+<meta name="theme-color" content="#2f6bff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="POELY">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22POELY%20%5Cu00b7%20WK-poule%202026%22%2C%20%22short_name%22%3A%20%22POELY%22%2C%20%22start_url%22%3A%20%22.%22%2C%20%22scope%22%3A%20%22.%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22background_color%22%3A%20%22%230b1230%22%2C%20%22theme_color%22%3A%20%22%232f6bff%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%2C%253Csvg%2520xmlns%253D%2522http%253A//www.w3.org/2000/svg%2522%2520viewBox%253D%25220%25200%2520512%2520512%2522%253E%253Crect%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520rx%253D%2522112%2522%2520fill%253D%2522%25232f6bff%2522/%253E%253Crect%2520x%253D%252264%2522%2520y%253D%252264%2522%2520width%253D%2522384%2522%2520height%253D%2522384%2522%2520rx%253D%252296%2522%2520fill%253D%2522%2523ccf83f%2522/%253E%253Cpath%2520d%253D%2522M300%252096%2520168%2520300h92l-24%2520116%2520168-228h-96z%2522%2520fill%253D%2522%25230b1230%2522/%253E%253C/svg%253E%22%2C%20%22sizes%22%3A%20%22any%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%232f6bff%22/%3E%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%22384%22%20height%3D%22384%22%20rx%3D%2296%22%20fill%3D%22%23ccf83f%22/%3E%3Cpath%20d%3D%22M300%2096%20168%20300h92l-24%20116%20168-228h-96z%22%20fill%3D%22%230b1230%22/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%232f6bff%22/%3E%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%22384%22%20height%3D%22384%22%20rx%3D%2296%22%20fill%3D%22%23ccf83f%22/%3E%3Cpath%20d%3D%22M300%2096%20168%20300h92l-24%20116%20168-228h-96z%22%20fill%3D%22%230b1230%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#0a1130; --app:#f4f7fd; --card:#ffffff; --soft:#eef3fb;
+    --blue:#2f6bff; --blue-d:#1746c4; --blue-l:#5b8bff; --navy:#0b1230; --navy2:#141d3e;
+    --lime:#ccf83f; --lime-d:#8fb407; --lime-glow:rgba(204,248,63,.55);
+    --txt:#0b1126; --muted:#647093; --line:#e6ebf3; --scr:#8a93a8;
+    --win:#1aa867; --gold:#d99410; --bronze:#c07a3a; --oranje:#ff7a1a; --red:#e8483b;
+    --panel:#ffffff; --panel2:#eef3fb; --accent:#2f6bff; --accent2:#5b8bff;
+    --disp:'Syne',system-ui,sans-serif; --ui:'Space Grotesk',system-ui,sans-serif;
+    --r-lg:24px; --r-md:18px; --r-sm:13px;
+    --sh-sm:0 2px 8px rgba(15,30,75,.06);
+    --sh-md:0 10px 28px -8px rgba(18,40,95,.18), 0 2px 8px rgba(18,40,95,.06);
+    --sh-lg:0 22px 50px -14px rgba(11,18,48,.30), 0 4px 14px rgba(11,18,48,.10);
+    --grad-deep:radial-gradient(130% 120% at 82% -12%,#3a72ff 0%,#1b2c66 46%,#0b1230 100%);
+    --grad-lime:linear-gradient(135deg,#dcff6a 0%,#ccf83f 45%,#aee01f 100%);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font-family:var(--ui);
+    background:
+      radial-gradient(80% 50% at 50% 0%,#13205a 0%,#0a1130 60%,#070b22 100%);
+    color:var(--txt);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--lime);color:#10210a}
+
+  .app{
+    max-width:480px;margin:0 auto;background:var(--app);min-height:100vh;
+    position:relative;padding-bottom:108px;overflow:hidden;
+    box-shadow:0 0 0 1px rgba(255,255,255,.04), 0 30px 80px -20px rgba(0,0,0,.6);
+    isolation:isolate;
+  }
+  .app::after{
+    content:"";position:fixed;inset:0;max-width:480px;margin:0 auto;left:0;right:0;
+    pointer-events:none;z-index:0;opacity:.5;mix-blend-mode:multiply;
+    background-image:
+      radial-gradient(rgba(20,40,90,.035) 1px,transparent 1px);
+    background-size:4px 4px;
+  }
+  .app>*{position:relative;z-index:1}
+
+  svg.ic,svg.ico,svg.ic-lg{display:inline-block;flex-shrink:0}
+  .ic{width:22px;height:22px} .ico{width:15px;height:15px;vertical-align:-2px} .ic-lg{width:20px;height:20px;vertical-align:-4px}
+
+  /* ============ HERO / BRAND ============ */
+  .hero{
+    background:var(--grad-deep);color:#fff;padding:20px 20px 30px;
+    border-radius:0 0 36px 36px;position:relative;overflow:hidden;
+    box-shadow:0 22px 44px -18px rgba(11,18,48,.55);
+    animation:heroIn .7s var(--ease) both;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 24px);
+    mask-image:linear-gradient(to bottom,#000,transparent 85%);
+  }
+  .hero::after{
+    content:"";position:absolute;top:-90px;right:-70px;width:240px;height:240px;
+    background:radial-gradient(circle,var(--lime-glow),transparent 65%);
+    filter:blur(8px);pointer-events:none;animation:orbFloat 9s ease-in-out infinite;
+  }
+  .brandbar{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+  .lock{display:flex;align-items:center;gap:11px}
+  .mark{
+    width:40px;height:40px;border-radius:13px;background:var(--grad-lime);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 20px -4px var(--lime-glow), inset 0 1px 0 rgba(255,255,255,.6);
+    position:relative;overflow:hidden;
+  }
+  .mark::after{
+    content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.85),transparent);
+    transform:skewX(-20deg);animation:shimmer 4.5s ease-in-out infinite;
+  }
+  .mark svg{width:23px;height:23px;color:#0b1230;position:relative;z-index:1}
+  .wm{line-height:1}
+  .wm .nm{font-family:var(--disp);font-weight:800;font-size:20px;letter-spacing:1.5px;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+  .wm .tg{font-size:9.5px;letter-spacing:3.5px;color:#a9bdf0;text-transform:uppercase;font-weight:600;margin-top:3px}
+  .iconbtn{
+    width:40px;height:40px;border-radius:13px;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
+    color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;
+    backdrop-filter:blur(6px);transition:transform .18s var(--ease),background .18s;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
+  }
+  .iconbtn:hover{background:rgba(255,255,255,.18);transform:translateY(-1px)}
+  .iconbtn:active{transform:scale(.94)}
+  .hero h1{
+    font-family:var(--disp);margin:24px 0 0;font-size:36px;font-weight:800;
+    line-height:.95;letter-spacing:-1px;position:relative;z-index:2;
+    text-shadow:0 3px 16px rgba(0,0,0,.32);
+  }
+  .hero h1 .g{
+    color:var(--lime);
+    text-shadow:0 0 22px var(--lime-glow);
+    background:linear-gradient(180deg,#e3ff7a,#ccf83f);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hero .row2{display:flex;align-items:center;justify-content:space-between;margin-top:16px;position:relative;z-index:2}
+  .datepill{
+    display:inline-flex;align-items:center;gap:8px;background:var(--grad-lime);
+    color:#10210a;font-weight:700;font-size:12.5px;padding:8px 15px;border-radius:30px;
+    font-family:var(--ui);box-shadow:0 6px 16px -4px var(--lime-glow),inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .acc{text-align:right;color:#aebfe6;font-size:9.5px;text-transform:uppercase;letter-spacing:1.2px;font-weight:600}
+  .acc b{
+    display:block;font-family:var(--disp);font-weight:800;font-size:24px;color:#fff;letter-spacing:0;
+    text-shadow:0 0 18px rgba(91,139,255,.5);
+  }
+
+  .wrap{padding:18px 14px 0;animation:fadeUp .5s var(--ease) both}
+  h2.sec{
+    font-family:var(--disp);font-size:16px;font-weight:800;letter-spacing:.2px;
+    margin:24px 4px 12px;display:flex;align-items:center;gap:10px;text-transform:uppercase;color:var(--txt);
+  }
+  h2.sec .bar{
+    width:26px;height:26px;color:var(--navy);background:var(--grad-lime);border-radius:9px;
+    padding:5px;box-shadow:0 4px 12px -3px var(--lime-glow);
+  }
+  .view{display:none} .view.active{display:block;animation:viewIn .4s var(--ease)}
+  @keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .note{
+    background:linear-gradient(180deg,#ffffff,#fbfdff);
+    border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:var(--r-sm);
+    padding:13px 15px;font-size:12.6px;line-height:1.55;color:var(--muted);
+    margin:0 4px 14px;box-shadow:var(--sh-sm);
+  }
+  .note b{color:var(--txt);font-weight:700}
+
+  /* ============ MATCH CARD ============ */
+  .mcard{
+    background:linear-gradient(180deg,#ffffff,#f7faff);
+    border-radius:var(--r-lg);padding:16px 16px 15px;margin:0 4px 13px;
+    box-shadow:var(--sh-md);border:1px solid var(--line);
+    position:relative;overflow:hidden;
+    animation:cardPop .45s var(--ease) both;
+  }
+  .mcard::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:5px;
+    background:var(--grad-lime);box-shadow:0 0 14px var(--lime-glow);
+  }
+  .mcard::after{
+    content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;
+    background:radial-gradient(circle,rgba(47,107,255,.07),transparent 70%);pointer-events:none;
+  }
+  .mtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
+  .gtag{
+    font-family:var(--disp);background:var(--navy);color:#fff;font-weight:700;font-size:10.5px;
+    padding:6px 12px;border-radius:9px;letter-spacing:.6px;
+    box-shadow:0 4px 10px -3px rgba(11,18,48,.4);
+  }
+  .st{
+    font-size:9.5px;font-weight:700;padding:5px 10px;border-radius:8px;text-transform:uppercase;
+    letter-spacing:.6px;display:inline-flex;align-items:center;gap:5px;
+  }
+  .st svg{width:12px;height:12px}
+  .st.pred{
+    background:#eaf0ff;color:var(--blue);
+    position:relative;padding-left:20px;
+  }
+  .st.pred::before{
+    content:"";position:absolute;left:9px;top:50%;transform:translateY(-50%);
+    width:6px;height:6px;border-radius:50%;background:var(--blue);
+    box-shadow:0 0 0 0 rgba(47,107,255,.5);animation:livePulse 1.8s ease-out infinite;
+  }
+  .st.done{background:#e3f7ee;color:var(--win)}
+  .mmid{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+  .mmid .tm{font-size:15px;font-weight:600;line-height:1.15}
+  .mmid .tm:first-child{text-align:right} .mmid .tm:last-child{text-align:left}
+  .scoreT{display:flex;align-items:center;gap:6px}
+  .scoreT b{
+    font-family:var(--disp);background:linear-gradient(170deg,#172250,#0b1230);
+    color:var(--lime);font-weight:800;font-size:23px;width:42px;height:48px;
+    display:flex;align-items:center;justify-content:center;border-radius:13px;
+    box-shadow:0 8px 18px -6px rgba(11,18,48,.5),inset 0 1px 0 rgba(255,255,255,.08);
+    animation:scorePop .5s var(--ease) both;
+  }
+  .scoreT i{color:var(--muted);font-style:normal;font-weight:700;font-size:14px}
+  .scoreT.done b{
+    background:var(--grad-lime);color:#13230a;
+    box-shadow:0 8px 18px -5px var(--lime-glow),inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .mnote{
+    margin-top:12px;padding-top:11px;border-top:1px dashed var(--line);
+    font-size:11.5px;color:var(--scr);text-align:center;
+    display:flex;align-items:center;justify-content:center;gap:6px;
+  }
+  .mnote svg{width:14px;height:14px;color:var(--lime-d)}
+  .empty{
+    background:linear-gradient(180deg,#fff,#f7faff);border:1.5px dashed #cdd6e6;border-radius:var(--r-md);
+    padding:26px;text-align:center;color:var(--muted);font-size:13px;margin:0 4px;
+  }
+
+  /* ============ NEWS ============ */
+  .newscard{
+    background:linear-gradient(160deg,#141d3e 0%,#0b1230 100%);
+    color:#dfe6f5;border-radius:var(--r-lg);padding:16px 18px;margin:0 4px 13px;
+    position:relative;overflow:hidden;
+    box-shadow:0 14px 34px -12px rgba(11,18,48,.6),inset 0 1px 0 rgba(255,255,255,.06);
+    animation:cardPop .5s var(--ease) both;
+  }
+  .newscard::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 1px,transparent 1px 16px);
+  }
+  .newscard::after{
+    content:"";position:absolute;right:-30px;bottom:-30px;width:120px;height:120px;
+    background:radial-gradient(circle,var(--lime-glow),transparent 70%);filter:blur(4px);
+  }
+  .newscard h3{
+    font-family:var(--disp);margin:0 0 10px;font-size:13px;color:var(--lime);font-weight:800;
+    text-transform:uppercase;letter-spacing:.6px;display:flex;align-items:center;gap:8px;
+    position:relative;z-index:1;text-shadow:0 0 14px var(--lime-glow);
+  }
+  .newscard h3 svg{width:16px;height:16px}
+  .newscard .nItem{
+    font-size:12.3px;line-height:1.5;padding:9px 0;border-top:1px solid rgba(255,255,255,.08);
+    color:#c4cee0;display:flex;gap:10px;align-items:flex-start;position:relative;z-index:1;
+  }
+  .newscard .nItem:first-of-type{border-top:none}
+  .newscard .nItem svg{width:13px;height:13px;color:var(--lime);flex-shrink:0;margin-top:2px;filter:drop-shadow(0 0 6px var(--lime-glow))}
+
+  /* ============ GENERIC CARD / TABLES ============ */
+  .grid{display:grid;grid-template-columns:1fr;gap:13px}
+  @media(min-width:430px){.grid.two{grid-template-columns:1fr 1fr}}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);
+    overflow:hidden;box-shadow:var(--sh-md);
+    animation:cardPop .45s var(--ease) both;
+  }
+  .card h3{
+    font-family:var(--disp);margin:0;padding:14px 16px;font-size:13px;font-weight:800;
+    letter-spacing:.4px;text-transform:uppercase;
+    background:linear-gradient(180deg,#f2f6fd,#e9f0fb);border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--txt);
+  }
+  .card h3 .ttl{display:flex;align-items:center;gap:8px}
+  .ghdr{font-family:var(--ui);color:var(--muted);font-size:10px;font-weight:500;text-transform:none;text-align:right;letter-spacing:0;line-height:1.3}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 13px;text-align:left}
+  thead th{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line);font-weight:700}
+  tbody tr{border-bottom:1px solid #f0f3f8;transition:background .15s}
+  tbody tr:last-child{border-bottom:none}
+  tbody tr:hover{background:#f7faff}
+  .pos{width:22px;color:var(--muted);font-weight:700;font-family:var(--disp);font-variant-numeric:tabular-nums}
+  .q1 td .team::before,.q2 td .team::before,.q3 td .team::before,.q3x td .team::before{
+    content:"";display:inline-block;width:8px;height:8px;border-radius:3px;margin-right:9px;vertical-align:middle;
+  }
+  .q1 td .team::before{background:var(--lime-d);box-shadow:0 0 7px var(--lime-glow)}
+  .q2 td .team::before{background:var(--blue)}
+  .q3 td .team::before{background:var(--gold)}
+  .q3x td .team::before{background:#c2cad8}
+  .q1{background:linear-gradient(90deg,rgba(204,248,63,.10),transparent)}
+  .q2{background:linear-gradient(90deg,rgba(47,107,255,.06),transparent)}
+  .pts{text-align:center;font-weight:700;width:36px;font-variant-numeric:tabular-nums;font-family:var(--disp)}
+  .matches{padding:8px 15px 13px}
+  .rlabel{
+    font-family:var(--disp);font-size:10px;text-transform:uppercase;letter-spacing:.7px;
+    color:var(--blue);margin:13px 0 4px;font-weight:800;display:flex;align-items:center;gap:7px;
+  }
+  .rlabel::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--blue);opacity:.5}
+  .mt{
+    display:flex;justify-content:space-between;gap:8px;font-size:12.3px;padding:7px 0;
+    color:var(--muted);border-bottom:1px solid #f1f4f9;line-height:1.4;
+  }
+  .mt:last-child{border-bottom:none}
+  .mt b{color:var(--txt);font-variant-numeric:tabular-nums;white-space:nowrap;font-family:var(--disp);font-weight:700}
+  .scr{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--scr);margin-top:3px}
+  .scr svg{width:12px;height:12px;color:var(--lime-d)}
+
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:2px 4px 14px;font-weight:500}
+  .legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .lg1::before{background:var(--lime-d);box-shadow:0 0 6px var(--lime-glow)} .lg2::before{background:var(--blue)} .lg3::before{background:var(--gold)} .lg4::before{background:#c2cad8}
+
+  /* ============ SCHEDULE ============ */
+  .sched .blk{margin-bottom:20px;animation:fadeUp .45s var(--ease) both}
+  .sched h4{
+    font-family:var(--disp);margin:0 0 10px 4px;font-size:13px;color:var(--txt);font-weight:800;
+    text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;gap:9px;
+  }
+  .sched h4 .dot{width:10px;height:10px;border-radius:3px;background:var(--grad-lime);box-shadow:0 0 8px var(--lime-glow)}
+  .srow{
+    display:grid;grid-template-columns:34px 1fr auto;gap:11px;align-items:center;padding:11px 13px;
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:8px;
+    font-size:13px;box-shadow:var(--sh-sm);transition:transform .16s var(--ease),box-shadow .16s;
+  }
+  .srow:hover{transform:translateX(2px);box-shadow:var(--sh-md)}
+  .srow .g{
+    font-family:var(--disp);font-size:11px;color:#fff;
+    background:linear-gradient(160deg,#172250,#0b1230);border-radius:9px;padding:6px 0;
+    text-align:center;font-weight:700;align-self:flex-start;box-shadow:0 3px 8px -2px rgba(11,18,48,.4);
+  }
+  .srow .pair{color:var(--txt);font-weight:500} .srow .pair .scr{margin-top:3px}
+  .srow .sc{
+    font-family:var(--disp);font-weight:800;color:#13230a;min-width:48px;text-align:center;
+    align-self:flex-start;background:var(--grad-lime);border-radius:9px;padding:5px 8px;
+    box-shadow:0 4px 10px -4px var(--lime-glow),inset 0 1px 0 rgba(255,255,255,.5);font-variant-numeric:tabular-nums;
+  }
+
+  /* ============ KNOCKOUT BRACKET ============ */
+  .rounds{display:flex;gap:14px;overflow-x:auto;padding:6px 4px 16px;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+  .rounds::-webkit-scrollbar{height:6px}
+  .rounds::-webkit-scrollbar-thumb{background:#c6d1e6;border-radius:3px}
+  .round{min-width:220px;flex:1;scroll-snap-align:start}
+  .round h4{
+    font-family:var(--disp);margin:0 0 11px;font-size:11px;text-transform:uppercase;letter-spacing:.8px;
+    color:#fff;text-align:center;font-weight:800;
+    background:linear-gradient(135deg,#2f6bff,#1746c4);padding:7px;border-radius:10px;
+    box-shadow:0 6px 16px -6px rgba(23,70,196,.6);
+  }
+  .tie{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:11px;
+    overflow:hidden;box-shadow:var(--sh-md);animation:cardPop .4s var(--ease) both;
+  }
+  .tie .mno{font-family:var(--disp);font-size:8.5px;color:var(--muted);padding:7px 12px 0;letter-spacing:.6px;text-transform:uppercase;font-weight:700}
+  .tie .row{display:flex;justify-content:space-between;padding:8px 12px;font-size:12.5px;align-items:center}
+  .tie .row+.row{border-top:1px solid var(--line)}
+  .tie .row.w{
+    color:var(--txt);font-weight:700;
+    background:linear-gradient(90deg,rgba(204,248,63,.28),rgba(204,248,63,.04) 70%,transparent);
+    position:relative;
+  }
+  .tie .row.w::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lime-d);
+  }
+  .tie .row .sc{font-family:var(--disp);color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
+  .tie .row.w .sc{color:var(--blue-d)}
+  .tie .slot{font-size:8.5px;color:var(--scr);font-weight:400;margin-left:5px}
+  .tie .srf{
+    font-size:10px;color:var(--scr);padding:6px 12px;border-top:1px solid var(--line);
+    background:var(--soft);display:flex;align-items:center;gap:5px;
+  }
+  .tie .srf svg{width:11px;height:11px;color:var(--lime-d)}
+
+  /* ============ PRIZES / PODIUM ============ */
+  .prize{
+    background:linear-gradient(180deg,#ffffff,#f7faff);
+    border:1px solid var(--line);border-radius:var(--r-md);padding:17px 19px;margin:0 4px 13px;
+    box-shadow:var(--sh-md);position:relative;overflow:hidden;
+    animation:cardPop .45s var(--ease) both;
+  }
+  .prize .lbl{
+    font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:700;
+    display:flex;align-items:center;gap:7px;justify-content:center;
+  }
+  .prize .lbl svg{width:15px;height:15px}
+  .prize .big{font-family:var(--disp);font-size:24px;font-weight:800;margin-top:6px;letter-spacing:-.4px;line-height:1.05}
+  .prize .sub{color:var(--muted);font-size:12.3px;margin-top:6px;line-height:1.5}
+  .podium{display:flex;gap:10px;flex-wrap:wrap}
+  .podium .prize{flex:1;min-width:140px;text-align:center}
+  .gold{
+    border-top:3px solid var(--gold);
+    background:linear-gradient(180deg,#fffaf0,#fff);
+    box-shadow:0 14px 34px -14px rgba(217,148,16,.4),var(--sh-sm);
+  }
+  .gold::after{
+    content:"";position:absolute;top:-50px;right:-50px;width:150px;height:150px;
+    background:radial-gradient(circle,rgba(224,163,22,.16),transparent 70%);pointer-events:none;
+  }
+  .silver{border-top:3px solid #9fb0c8;background:linear-gradient(180deg,#fafcff,#fff)}
+  .bronze{border-top:3px solid var(--bronze);background:linear-gradient(180deg,#fdf6f0,#fff)}
+  .oranje-card{
+    border:1px solid var(--oranje);
+    background:linear-gradient(160deg,#fff1e4,#fff);
+    box-shadow:0 14px 34px -14px rgba(255,122,26,.35),var(--sh-sm);
+  }
+  .oranje-card::after{
+    content:"";position:absolute;top:-50px;right:-50px;width:150px;height:150px;
+    background:radial-gradient(circle,rgba(255,122,26,.16),transparent 70%);pointer-events:none;
+  }
+  .oranje-card .big{color:var(--oranje)}
+  .chip{
+    display:inline-flex;align-items:center;gap:5px;background:var(--soft);
+    border:1px solid var(--line);border-radius:20px;padding:6px 12px;font-size:11px;
+    margin:4px 4px 0 0;color:var(--muted);font-weight:500;transition:transform .15s;
+  }
+  .chip:hover{transform:translateY(-1px)}
+  .conf{
+    font-family:var(--disp);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+    padding:3px 9px;border-radius:7px;white-space:nowrap;
+  }
+  .conf.h{background:#e3f7ee;color:var(--win)} .conf.m{background:#fdf3e0;color:var(--gold)}
+
+  /* ============ MEER MENU ============ */
+  .menu{display:grid;gap:12px}
+  .mbtn{
+    display:flex;align-items:center;gap:14px;background:linear-gradient(180deg,#fff,#f7faff);
+    border:1px solid var(--line);border-radius:var(--r-md);padding:16px 17px;cursor:pointer;
+    box-shadow:var(--sh-sm);text-align:left;width:100%;font:inherit;color:var(--txt);
+    transition:transform .18s var(--ease),box-shadow .18s,border-color .18s;
+    position:relative;overflow:hidden;
+  }
+  .mbtn:hover{transform:translateY(-2px);box-shadow:var(--sh-md);border-color:#d2deef}
+  .mbtn:active{transform:translateY(0) scale(.99)}
+  .mbtn .ic-w{
+    width:44px;height:44px;border-radius:14px;
+    background:linear-gradient(160deg,#172250,#0b1230);color:var(--lime);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    box-shadow:0 6px 16px -5px rgba(11,18,48,.5),inset 0 1px 0 rgba(255,255,255,.07);
+  }
+  .mbtn .ic-w svg{width:21px;height:21px;filter:drop-shadow(0 0 6px var(--lime-glow))}
+  .mbtn .t{font-family:var(--disp);font-weight:700;font-size:14.5px}
+  .mbtn .d{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+  .mbtn .ar{margin-left:auto;color:var(--muted);transition:transform .18s var(--ease)}
+  .mbtn:hover .ar{transform:translateX(3px);color:var(--blue)}
+
+  /* ============ BOTTOM NAV ============ */
+  .nav{
+    position:fixed;left:50%;transform:translateX(-50%);bottom:14px;
+    width:calc(min(480px,100%) - 24px);
+    background:linear-gradient(180deg,#141d3e,#0b1230);
+    border-radius:24px;display:flex;justify-content:space-around;padding:10px 6px;
+    box-shadow:0 18px 44px -12px rgba(6,11,30,.7),inset 0 1px 0 rgba(255,255,255,.08);
+    z-index:30;border:1px solid rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+    animation:navIn .5s var(--ease) .15s both;
+  }
+  .nav button{
+    background:none;border:none;color:#8a96b5;font-family:var(--ui);font-size:9.5px;font-weight:600;
+    display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;
+    padding:7px 11px;border-radius:15px;transition:color .2s var(--ease),background .25s var(--ease),transform .15s;
+    position:relative;
+  }
+  .nav button svg{transition:transform .25s var(--ease)}
+  .nav button:active{transform:scale(.92)}
+  .nav button:hover{color:#c4cee0}
+  .nav button.on{
+    color:#13230a;background:var(--grad-lime);
+    box-shadow:0 6px 16px -4px var(--lime-glow),inset 0 1px 0 rgba(255,255,255,.5);
+  }
+  .nav button.on svg{transform:translateY(-1px) scale(1.06)}
+
+  footer{text-align:center;color:var(--muted);font-size:10.5px;line-height:1.6;padding:20px 14px 6px}
+
+  /* ============ KEYFRAMES ============ */
+  @keyframes heroIn{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
+  @keyframes navIn{from{opacity:0;transform:translate(-50%,24px)}to{opacity:1;transform:translate(-50%,0)}}
+  @keyframes cardPop{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+  @keyframes scorePop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+  @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(47,107,255,.5)}70%{box-shadow:0 0 0 7px rgba(47,107,255,0)}100%{box-shadow:0 0 0 0 rgba(47,107,255,0)}}
+  @keyframes shimmer{0%,100%{left:-120%}55%,75%{left:130%}}
+  @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,12px) scale(1.08)}}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  }
+
+  </style>
+<style id="theme-override">
+  /* ===== Referentie-stijl: Poppins, lichter & kleurrijker ===== */
+  :root{ --disp:'Share Tech',system-ui,sans-serif; --ui:'Montserrat',system-ui,sans-serif; }
+  body{ background:linear-gradient(180deg,#eaf1fc 0%,#dde7f6 100%) fixed; }
+  .app{ background:#f6f9ff; box-shadow:0 0 0 1px rgba(255,255,255,.6),0 30px 80px -30px rgba(40,70,140,.30); }
+  .app::after{ opacity:.3 }
+  /* helderdere hero */
+  .hero{ background:linear-gradient(140deg,#46abff 0%,#2f6bff 55%,#5f8cff 100%); }
+  /* Poppins-vriendelijke tracking (Syne-tracking ongedaan) */
+  .hero h1{ letter-spacing:-.5px; font-size:34px }
+  h2.sec{ letter-spacing:0; text-transform:none; font-size:17px; font-weight:700 }
+  .card h3{ letter-spacing:.2px }
+  .gtag,.conf,.tie .mno,.round h4,.rlabel,.sched h4,.cov-kicker{ letter-spacing:.3px }
+  .wm .nm{ letter-spacing:.5px }
+  /* scoretegels: lime zoals referentie (voorspelling); gespeeld = blauw */
+  .scoreT b{ background:var(--grad-lime); color:#11220a; box-shadow:0 8px 18px -6px var(--lime-glow),inset 0 1px 0 rgba(255,255,255,.65) }
+  .scoreT.done b{ background:linear-gradient(170deg,#3a86ff,#2f6bff); color:#fff; box-shadow:0 8px 18px -6px rgba(47,107,255,.5) }
+
+  /* ===== WELKOMSTSCHERM ===== */
+  #welkom.view{ display:none; padding:0 }
+  #welkom.view.active{ display:block; animation:none }
+  .cover{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;
+    padding:32px 24px 40px;overflow:hidden;color:#fff;
+    background:linear-gradient(135deg,#39a8ff 0%,#2f6bff 36%,#6a5cff 68%,#a6e22e 118%);
+    background-size:220% 220%;animation:coverShift 16s ease-in-out infinite;
+  }
+  @keyframes coverShift{0%{background-position:0% 45%}50%{background-position:100% 55%}100%{background-position:0% 45%}}
+  .cover::before{ content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(46% 40% at var(--mx,72%) var(--my,16%),rgba(255,255,255,.6),transparent 70%);
+    mix-blend-mode:soft-light;transition:background .25s ease }
+  .cover::after{ content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(118deg,rgba(255,255,255,.07) 0 2px,transparent 2px 26px);
+    -webkit-mask-image:linear-gradient(transparent,#000 55%);mask-image:linear-gradient(transparent,#000 55%) }
+  .cov-ball{ position:absolute;right:-78px;top:96px;width:330px;height:330px;color:#fff;opacity:.13;transform:rotate(-12deg);z-index:1 }
+  .cov-top,.cov-mid,.cov-bot{ position:relative;z-index:2 }
+  .cov-top .wm .nm{ color:#fff;font-size:21px } .cov-top .wm .tg{ color:rgba(255,255,255,.82) }
+  .cov-mid{ margin:auto 0 }
+  .cov-kicker{ font-weight:600;font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.92) }
+  .cov-title{ font-family:var(--disp);font-weight:800;font-size:clamp(76px,27vw,118px);line-height:.82;letter-spacing:-3px;margin:10px 0 0;text-shadow:0 10px 34px rgba(0,0,0,.26) }
+  .cov-title span{ color:var(--lime);text-shadow:0 0 34px var(--lime-glow) }
+  .cov-sub{ font-size:14px;color:rgba(255,255,255,.94);margin-top:16px;font-weight:500 }
+  .cov-stats{ display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap }
+  .cov-stats span{ background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:30px;padding:8px 14px;font-size:12px;font-weight:600 }
+  .cta{ display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:none;cursor:pointer;
+    font-family:var(--disp);font-weight:700;font-size:16px;color:#10210a;background:var(--grad-lime);
+    padding:18px;border-radius:20px;box-shadow:0 16px 32px -8px var(--lime-glow),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .15s var(--ease) }
+  .cta:hover{ transform:translateY(-2px) } .cta:active{ transform:scale(.98) }
+  .cta svg{ width:20px;height:20px }
+</style>
+<style id="pro-ui">
+  /* ===== Donker thema ===== */
+  html[data-theme=dark]{ --bg:#070b1c; --app:#0b1226; --card:#121a31; --soft:#172139; --line:#26324c; --txt:#e9eef9; --muted:#97a4c2; }
+  [data-theme=dark] body{ background:radial-gradient(80% 50% at 50% 0%,#13205a 0%,#070b1c 60%,#04060f 100%) }
+  [data-theme=dark] .app{ background:#0b1226; box-shadow:0 0 0 1px rgba(255,255,255,.05),0 30px 80px -28px #000 }
+  [data-theme=dark] .card,[data-theme=dark] .mcard,[data-theme=dark] .prize,[data-theme=dark] .note,[data-theme=dark] .mbtn,[data-theme=dark] .empty,[data-theme=dark] .srow,[data-theme=dark] .tie,[data-theme=dark] .tipbar{ background:var(--card)!important }
+  [data-theme=dark] .card h3,[data-theme=dark] .tie .srf{ background:var(--soft)!important;color:var(--txt) }
+  [data-theme=dark] thead th,[data-theme=dark] .ghdr,[data-theme=dark] .note,[data-theme=dark] .ghdr{ color:var(--muted) }
+  [data-theme=dark] tbody tr,[data-theme=dark] .mt,[data-theme=dark] .tie .row+.row{ border-color:#1c2740 }
+  [data-theme=dark] tbody tr:hover{ background:#16203a }
+  [data-theme=dark] .gtag{ background:#08122c } [data-theme=dark] .chip{ background:var(--soft) }
+  [data-theme=dark] .note b,[data-theme=dark] .mt b,[data-theme=dark] .pts{ color:var(--txt) }
+
+  /* ===== Toast ===== */
+  .toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%) translateY(10px);background:#0b1230;color:#fff;font-family:var(--ui);font-size:13px;font-weight:600;padding:11px 18px;border-radius:14px;box-shadow:0 16px 34px -10px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:.25s var(--ease);z-index:60;border:1px solid rgba(255,255,255,.12)}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  /* ===== Mijn tips (interactief) ===== */
+  .tipbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 14px;margin:0 4px 14px;box-shadow:var(--sh-sm);font-size:12px;color:var(--muted);font-weight:600}
+  .tipbar b{color:var(--txt);font-family:var(--disp);font-size:13px}
+  .tipbar .pbar{flex:1;height:8px;border-radius:5px;background:var(--soft);overflow:hidden}
+  .tipbar .pbar i{display:block;height:100%;background:var(--grad-lime);width:0;transition:width .4s var(--ease)}
+  .tiprow{display:flex;align-items:center;justify-content:flex-end;gap:7px;margin:-3px 4px 9px;padding:0 4px}
+  .tiprow label{font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.3px;margin-right:auto}
+  .tiprow input{width:38px;height:34px;text-align:center;border:1.5px solid var(--line);border-radius:10px;font-family:var(--disp);font-weight:800;font-size:16px;background:var(--soft);color:var(--txt);-moz-appearance:textfield}
+  .tiprow input::-webkit-outer-spin-button,.tiprow input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .tiprow input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,107,255,.16)}
+  .tiprow .dash{color:var(--muted);font-weight:800;font-family:var(--disp)}
+  .tiprow .hit{font-size:10px;font-weight:800;color:var(--win);display:none;margin-left:4px}
+  .tiprow.hit .hit{display:inline}
+  .tiprow.hit input{border-color:var(--lime-d)}
+
+  /* ===== Favoriet land ===== */
+  .fav-row{ box-shadow:inset 3px 0 0 var(--lime-d) }
+  .fav-star{ color:var(--gold);margin-right:5px }
+
+  /* ===== Instellingen ===== */
+  .seg{display:flex;gap:8px} .seg button{flex:1;border:1.5px solid var(--line);background:var(--card);color:var(--muted);font:inherit;font-family:var(--ui);font-weight:700;padding:12px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+  .seg button.on{border-color:var(--blue);background:rgba(47,107,255,.09);color:var(--txt)}
+  .seg button svg{width:16px;height:16px}
+  .selteam{width:100%;padding:13px;border:1.5px solid var(--line);border-radius:12px;background:var(--card);color:var(--txt);font:inherit;font-family:var(--ui);font-weight:600}
+  .btn-danger{width:100%;padding:13px;border:1.5px solid #f1c3bd;background:#fff;color:var(--red);font:inherit;font-family:var(--ui);font-weight:700;border-radius:12px;cursor:pointer}
+  [data-theme=dark] .btn-danger{background:var(--card);border-color:#5a2b2b}
+  .setlbl{font-family:var(--disp);font-weight:800;font-size:13px;margin-bottom:9px;text-transform:uppercase;letter-spacing:.3px}
+</style>
+
+</head>
+<body>
+<div class="app">
+<!-- ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.2 5.2 13.1a.85.85 0 0 0 .68 1.36h4.04l-1.1 7.06a.42.42 0 0 0 .76.31l8.27-10.92a.85.85 0 0 0-.68-1.36h-4.05l1.13-7.06a.42.42 0 0 0-.76-.31Z" fill="currentColor"/></symbol>
+  <symbol id="i-today" viewBox="0 0 24 24"><rect x="3.25" y="5" width="17.5" height="16" rx="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="6.8" y="12.6" width="3.6" height="3.6" rx="1" fill="currentColor"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8.5 6.5h12M8.5 12h12M8.5 17.5h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="3.8" cy="6.5" r="1.6" fill="currentColor"/><circle cx="3.8" cy="12" r="1.6" fill="currentColor"/><circle cx="3.8" cy="17.5" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M6.5 4h11v5.2a5.5 5.5 0 0 1-11 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6.5 5.5H3.8v1.8a3.2 3.2 0 0 0 3.2 3.2M17.5 5.5h2.7v1.8a3.2 3.2 0 0 1-3.2 3.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 14.7V18M8.5 20.2h7M9.5 20.2c0-1.5 1.1-2.2 2.5-2.2s2.5.7 2.5 2.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M5 20.5v-7M12 20.5v-13M19 20.5v-9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.9" fill="currentColor"/><circle cx="12" cy="12" r="1.9" fill="currentColor"/><circle cx="19" cy="12" r="1.9" fill="currentColor"/></symbol>
+  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8.05l3.33 2.42-1.27 3.92H9.94l-1.27-3.92Z" fill="currentColor"/><path d="M12 3v2.4M4.2 9.1l2.3 1.5M6.6 18.6l1.9-1.6M17.4 18.6l-1.9-1.6M19.8 9.1l-2.3 1.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.5 11a7.5 7.5 0 0 0-13-4.3M4.5 13a7.5 7.5 0 0 0 13 4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.7 2.8v4h-4M17.3 21.2v-4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-news" viewBox="0 0 24 24"><path d="M16.5 19.5H6a2.5 2.5 0 0 1-2.5-2.5V5.5a1 1 0 0 1 1-1H16a1 1 0 0 1 1 1V17a2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5v-6.5a1 1 0 0 0-1-1H17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 8.5h7M6.5 12h7M6.5 15.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11.2v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.7" r="1.25" fill="currentColor"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.6 5 5.4a1 1 0 0 0-.62.95c.04 5.9 2.06 10.1 7.2 12.85a.9.9 0 0 0 .84 0c5.14-2.75 7.16-6.95 7.2-12.85a1 1 0 0 0-.62-.95Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.6l2.1 2.1L15 9.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.7 5.66 6.2.83a.5.5 0 0 1 .28.86l-4.55 4.27 1.16 6.16a.5.5 0 0 1-.74.53L12 17.78l-5.5 3.1a.5.5 0 0 1-.74-.53l1.16-6.16-4.55-4.27a.5.5 0 0 1 .28-.86l6.2-.83Z" fill="currentColor"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><path d="M8.5 3l3.5 6.5M15.5 3 12 9.5M8.5 3H5l3 5.4M15.5 3H19l-3 5.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="15.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12.7l.86 1.74 1.92.28-1.39 1.35.33 1.91L12 17.06l-1.72.9.33-1.9-1.39-1.36 1.92-.28Z" fill="currentColor"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.2V12l3.2 1.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12.5 2.4c.7 2.7-1.4 4-1.9 5.9-.3 1.2.6 2.3 1.9 2.3 1.1 0 1.8-.8 1.9-1.7 1.3 1.2 2.6 3 2.6 5.3a5 5 0 0 1-10 0c0-2.2 1.2-3.7 2.4-5.2.3 1 1 1.7 1.9 1.7-1.3-2.7.1-5.9 1.3-8.3Z" fill="currentColor"/></symbol>
+  <symbol id="i-mtn" viewBox="0 0 24 24"><path d="M2.7 19.5 8.7 7.8a.6.6 0 0 1 1.04-.04l3.36 5.5 1.5-2.2a.6.6 0 0 1 1 .01l5 8.43Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7.3 11l1.6 2 1.5-1.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M10.5 4.3 3 8.4l2.6 2L4 13.7l2.3 1 1-1.6 4.6 4.6a.6.6 0 0 0 1-.27l3.85-13.5a.6.6 0 0 0-.74-.74Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M18.4 3.6 11 13.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="7.5" y="2.5" width="9" height="14" rx="2" transform="rotate(-9 12 12)" fill="currentColor"/><rect x="7.5" y="7.5" width="9" height="14" rx="2" transform="rotate(9 12 12)" fill="currentColor" opacity=".55"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.8 12.6 9.3 17 19.2 6.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.2 6.2 17.8 17.8M17.8 6.2 6.2 17.8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5.5 21.5V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5.5 4.2c3.5-1.6 6.5 1.2 10 0v8c-3.5 1.2-6.5-1.6-10 0Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.6l1.5 2.9 3.2-.6 .9 3.1 2.9 1.5-1.5 2.9 1.5 2.9-2.9 1.5-.9 3.1-3.2-.6L12 21.4l-1.5-2.9-3.2.6-.9-3.1-2.9-1.5 1.5-2.9-1.5-2.9 2.9-1.5 .9-3.1 3.2.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  </svg>
+
+<!-- ===== WELKOM ===== -->
+  <div class="view active" id="welkom">
+    <div class="cover">
+      <div class="cov-top">
+        <div class="lock"><div class="mark"><svg viewBox="0 0 24 24"><use href="#i-bolt"></use></svg></div><div class="wm"><div class="nm">POELY</div><div class="tg">WK-POULE</div></div></div>
+      </div>
+      <div class="cov-mid">
+        <div class="cov-kicker">Wereldkampioenschap voetbal</div>
+        <h1 class="cov-title">WK<span>26</span></h1>
+        <div class="cov-sub">VS · Canada · Mexico — 11 juni t/m 19 juli</div>
+      </div>
+      <div class="cov-bot">
+        <div class="cov-stats"><span>48 landen</span><span>104 duels</span><span>jouw poule</span></div>
+        <button class="cta" data-go="vandaag">Bekijk vandaag <svg><use href="#i-chev"></use></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== VANDAAG ===== -->
+  <div class="view" id="vandaag">
+    <div class="hero">
+      <div class="brandbar">
+        <div class="lock">
+          <div class="mark"><svg viewBox="0 0 24 24"><use href="#i-bolt"></use></svg></div>
+          <div class="wm"><div class="nm">POELY</div><div class="tg">WK-poule '26</div></div>
+        </div>
+        <div style="display:flex;gap:9px"><button class="iconbtn" data-go="instellingen" title="Instellingen"><svg class="ic"><use href="#i-gear"></use></svg></button><button class="iconbtn" data-go="knockout" title="Knock-out"><svg class="ic"><use href="#i-cup"></use></svg></button></div>
+      </div>
+      <h1>Wedstrijden<br><span class="g">Vandaag</span></h1>
+      <div class="row2">
+        <span class="datepill"><svg class="ico" style="color:#10210a"><use href="#i-today"></use></svg><span id="heroDate">—</span></span>
+        <span class="acc"><b id="accStat">—</b>treffers</span>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="newscard"><h3><svg><use href="#i-news"></use></svg> Relevant nieuws</h3><div id="newsList"></div></div>
+      <h2 class="sec"><svg class="bar"><use href="#i-today"></use></svg> Vandaag</h2>
+      <div id="todayCards"></div>
+      <h2 class="sec"><svg class="bar"><use href="#i-chev"></use></svg> Morgen</h2>
+      <div id="tmrwCards"></div>
+      <div class="note" style="margin-top:8px"><b>Live:</b> de app ververst elke <b>30 minuten</b> met echte uitslagen, relevant nieuws (betrouwbare bronnen) en bijgestelde voorspellingen.</div>
+    </div>
+  </div>
+
+  <!-- ===== SCHEMA ===== -->
+  <div class="view" id="schema"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-list"></use></svg> Speelschema</h2>
+    <div class="note">Alle wedstrijden <b>per speeldag</b> (officieel FIFA-schema). Letter = groep · <svg class="ico" style="color:var(--scr)"><use href="#i-ball"></use></svg> eerste doelpuntenmaker. Datums ronde 2/3 indicatief.</div>
+    <div class="sched" id="schedList"></div>
+  </div></div>
+
+  <!-- ===== KNOCKOUT ===== -->
+  <div class="view" id="knockout"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-cup"></use></svg> Knock-out</h2>
+    <div class="note"><b>Officiële FIFA-bracket</b>: vaste posities (wedstrijdnr + groep, bv. 1F–2C). De 8 beste nummers 3 zijn via de FIFA-tabel gekoppeld.</div>
+    <div class="card" style="margin:0 4px 14px">
+      <h3><span class="ttl"><svg class="ic-lg" style="color:var(--gold)"><use href="#i-medal"></use></svg> Beste 8 nummers 3 — door</span></h3>
+      <div class="matches" style="padding:13px 14px">
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:11px" id="thirdsIn"></div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:5px">Net afgevallen:</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px" id="thirdsOut"></div>
+      </div>
+    </div>
+    <div class="rounds" id="bracket"></div>
+  </div></div>
+
+  <!-- ===== STANDEN ===== -->
+  <div class="view" id="groepen"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-bars"></use></svg> Groepsstanden</h2>
+    <div class="legend"><span class="lg1">1e door</span><span class="lg2">2e door</span><span class="lg3">3e (beste 8)</span><span class="lg4">uit</span></div>
+    <div class="grid" id="groupGrid"></div>
+  </div></div>
+
+  <!-- ===== MEER ===== -->
+  <div class="view" id="meer"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-more"></use></svg> Meer</h2>
+    <div class="menu">
+      <button class="mbtn" data-go="refresh"><span class="ic-w"><svg><use href="#i-refresh"></use></svg></span><span><span class="t">Refresh &amp; uitslagen</span><span class="d">Echte uitslagen vs. voorspelling + wijzigingen</span></span><span class="ar"><svg class="ic"><use href="#i-chev"></use></svg></span></button>
+      <button class="mbtn" data-go="prijzen"><span class="ic-w"><svg><use href="#i-cup"></use></svg></span><span><span class="t">Winnaar &amp; prijsvragen</span><span class="d">Kampioen, titelkansen, topscorer, schifting</span></span><span class="ar"><svg class="ic"><use href="#i-chev"></use></svg></span></button>
+      <button class="mbtn" data-go="oranje"><span class="ic-w"><svg><use href="#i-shield"></use></svg></span><span><span class="t">Oranje</span><span class="d">Route en hoe ver Nederland komt</span></span><span class="ar"><svg class="ic"><use href="#i-chev"></use></svg></span></button>
+      <button class="mbtn" data-go="xfactor"><span class="ic-w"><svg><use href="#i-bolt"></use></svg></span><span><span class="t">X-factoren</span><span class="d">Hitte, reizen, strafschoppen, schorsingen</span></span><span class="ar"><svg class="ic"><use href="#i-chev"></use></svg></span></button>
+      <button class="mbtn" data-go="uitleg"><span class="ic-w"><svg><use href="#i-info"></use></svg></span><span><span class="t">Hoe gemaakt</span><span class="d">Multi-agent ensemble &amp; betrouwbaarheid</span></span><span class="ar"><svg class="ic"><use href="#i-chev"></use></svg></span></button>
+        <button class="mbtn" data-go="instellingen"><span class="ic-w"><svg><use href="#i-gear"></use></svg></span><span><span class="t">Instellingen</span><span class="d">Thema, favoriet land, mijn tips</span></span><span class="ar"><svg class="ic"><use href="#i-chev"></use></svg></span></button>
+    </div>
+  </div></div>
+
+  <!-- ===== REFRESH ===== -->
+  <div class="view" id="refresh"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-refresh"></use></svg> Refresh &amp; uitslagen</h2>
+    <div class="note" id="refStamp" style="border-left-color:var(--gold)"><b>Laatste update: zondag 14 juni, 21:15 (NL-tijd).</b> Gespeeld: speelronde 1 van groepen A–D. Treffers: 2 exact + 1 juiste uitslag. Grillige openingsronde.</div>
+    <h2 class="sec"><svg class="bar"><use href="#i-check"></use></svg> Voorspeld vs. echt</h2>
+    <div class="card" style="margin:0 4px"><table><thead><tr><th>Wedstrijd</th><th class="pts">Voorsp.</th><th class="pts">Echt</th><th></th></tr></thead><tbody id="refTable"></tbody></table></div>
+    <h2 class="sec"><svg class="bar"><use href="#i-refresh"></use></svg> Aangepaste voorspellingen</h2>
+    <div class="note">Wijzigingen op basis van vorm, uitslagen, schorsingen en blessures. Groeit elke update mee.</div>
+    <div class="card" style="margin:0 4px"><div class="matches" id="changeLog"></div></div>
+    <h2 class="sec"><svg class="bar"><use href="#i-info"></use></svg> Bijgestelde vooruitblik</h2>
+    <div class="note">
+      <b>Groep C:</b> Schotland leidt (3 ptn); Brazilië &amp; Marokko morsten punten. Brazilië blijft favoriet, Schotland maakt nu kans op de knock-out.<br><br>
+      <b>Groep D:</b> Australië (3 ptn) klopte Turkije, VS won 4–1. Turkije en Paraguay staan op 0.<br><br>
+      <b>Groep B:</b> alles open — alle vier op 1 punt.<br><br>
+      <b>Groep A:</b> exact volgens plan; wel 3 rode kaarten in de opener.
+    </div>
+  </div></div>
+
+  <!-- ===== PRIJZEN ===== -->
+  <div class="view" id="prijzen"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-cup"></use></svg> Wereldkampioen</h2>
+    <div class="prize gold" style="text-align:center">
+      <div class="lbl"><svg style="color:var(--gold)"><use href="#i-cup"></use></svg> Mijn pick voor de titel</div>
+      <div class="big" style="font-size:31px;color:var(--gold)">Spanje</div>
+      <div class="sub">Nummer 1 bij Opta (16,1%), Kalshi (16,5%), Nate Silver én de bookmakers. Wint de finale 2–1 van Engeland.</div>
+    </div>
+    <div class="note"><b>Onzekerheid:</b> bij 48 teams wint zelfs de favoriet ~5 van 6 keer níét. <b>Frankrijk</b> (~15%) zit er vlak achter, maar in dezelfde helft als Spanje (halve finale). Affiche: <b>Spanje–Engeland</b>.</div>
+    <h2 class="sec"><svg class="bar"><use href="#i-bars"></use></svg> Titelkansen</h2>
+    <div class="card" style="margin:0 4px"><table><thead><tr><th></th><th>Land</th><th class="pts">Kans</th></tr></thead><tbody id="oddsBody"></tbody></table></div>
+    <h2 class="sec"><svg class="bar"><use href="#i-medal"></use></svg> Eindstand</h2>
+    <div class="podium">
+      <div class="prize gold"><div class="lbl"><svg style="color:var(--gold)"><use href="#i-cup"></use></svg> Kampioen</div><div class="big">Spanje</div><div class="sub">2–1 vs Engeland</div></div>
+      <div class="prize silver"><div class="lbl"><svg style="color:#9fb0c8"><use href="#i-medal"></use></svg> Finalist</div><div class="big">Engeland</div></div>
+      <div class="prize bronze"><div class="lbl"><svg style="color:var(--bronze)"><use href="#i-medal"></use></svg> Derde</div><div class="big">Frankrijk</div><div class="sub">2–1 vs Argentinië</div></div>
+    </div>
+    <div class="prize" style="margin-top:2px"><div class="lbl">4e plaats</div><div class="big" style="font-size:18px">Argentinië</div></div>
+    <h2 class="sec"><svg class="bar"><use href="#i-star"></use></svg> Prijsvragen</h2>
+    <div class="grid two">
+      <div class="prize"><div class="lbl"><svg><use href="#i-ball"></use></svg> Topscorer</div><div class="big" style="font-size:18px">Kylian Mbappé</div><div class="sub">Frankrijk · unaniem. Alt: Kane.</div></div>
+      <div class="prize"><div class="lbl"><svg><use href="#i-star"></use></svg> Beste speler</div><div class="big" style="font-size:18px">Lamine Yamal</div><div class="sub">Spanje. Alt: Messi / Mbappé.</div></div>
+    </div>
+    <h2 class="sec"><svg class="bar"><use href="#i-clock"></use></svg> Schiftingsvragen</h2>
+    <div class="note">De eerste goal viel echt in minuut 9 en de eerste rode kaart al in de opener — die liggen vast.</div>
+    <div class="podium">
+      <div class="prize"><div class="lbl"><svg><use href="#i-ball"></use></svg> 1e goal</div><div class="big" style="color:var(--blue)">23'</div></div>
+      <div class="prize"><div class="lbl"><svg style="color:var(--gold)"><use href="#i-card"></use></svg> 1e geel</div><div class="big" style="color:var(--gold)">27'</div></div>
+      <div class="prize"><div class="lbl"><svg style="color:var(--red)"><use href="#i-card"></use></svg> 1e rood</div><div class="big" style="color:var(--red)">64'</div></div>
+    </div>
+  </div></div>
+
+  <!-- ===== ORANJE ===== -->
+  <div class="view" id="oranje"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-shield"></use></svg> Oranje</h2>
+    <div class="prize oranje-card">
+      <div class="lbl" style="justify-content:flex-start"><svg style="color:var(--oranje)"><use href="#i-shield"></use></svg> Hoe ver komt Nederland?</div>
+      <div class="big">Kwartfinale</div>
+      <div class="sub">Unaniem bij alle 4 analyses. Oranje wint groep F, klopt Marokko (R32) en Zuid-Korea (1/8e), en verliest in de kwartfinale van Frankrijk (1–2).</div>
+    </div>
+    <div class="card" style="margin:0 4px 12px"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--oranje)"><use href="#i-shield"></use></svg> Route van Oranje</span><span class="ghdr">Groep F</span></h3><div class="matches" id="oranjeRoute"></div></div>
+    <div class="note"><b>Aandachtspunten:</b> Xavi Simons, De Ligt en Timber afwezig; Depay niet topfit. Sterke kwalificatiedefensie. Groep F speelt in hete zuidelijke steden.</div>
+    <div style="margin:0 4px"><span class="chip">Koeman</span><span class="chip">Captain: Van Dijk</span><span class="chip">De Jong · Gakpo · Depay</span></div>
+  </div></div>
+
+  <!-- ===== X-FACTOREN ===== -->
+  <div class="view" id="xfactor"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-bolt"></use></svg> X-factoren</h2>
+    <div class="note">Moeilijk voorspelbare invloeden die veel uitslagen bepalen — vooral in de knock-out.</div>
+    <div class="grid">
+      <div class="card"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--oranje)"><use href="#i-flame"></use></svg> Hitte</span></h3><div class="matches" style="font-size:12.3px;color:var(--muted);padding:13px 14px">Open middag-venues (Kansas City, Monterrey, Miami) verlagen het tempo → meer stuntkans. <b style="color:var(--win)">Voordeel:</b> Mexico, Brazilië, Marokko. <b style="color:var(--bronze)">Nadeel:</b> NL, Duitsland, Engeland.</div></div>
+      <div class="card"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--blue)"><use href="#i-mtn"></use></svg> Hoogte</span></h3><div class="matches" style="font-size:12.3px;color:var(--muted);padding:13px 14px">Mexico-Stad (~2.240 m) &amp; Guadalajara. Voordeel Mexico (opent én sluit op hoogte).</div></div>
+      <div class="card"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--blue)"><use href="#i-plane"></use></svg> Reizen</span></h3><div class="matches" style="font-size:12.3px;color:var(--muted);padding:13px 14px">Gunstig: Mexico, Frankrijk. Zwaar: Spanje (~12.600 km) — vergroot variantie op hun titel.</div></div>
+      <div class="card"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--win)"><use href="#i-target"></use></svg> Strafschoppen</span></h3><div class="matches" style="font-size:12.3px;color:var(--muted);padding:13px 14px">Sterk: Duitsland, Argentinië. Zwak: Nederland, Engeland, Spanje — tegenstander krijgt een randje bij coinflips.</div></div>
+      <div class="card"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--gold)"><use href="#i-card"></use></svg> Schorsingen</span></h3><div class="matches" style="font-size:12.3px;color:var(--muted);padding:13px 14px">Gelen vervallen na groepsfase én na kwartfinale. Rood/2e geel = volgende duel missen.</div></div>
+      <div class="card"><h3><span class="ttl"><svg class="ic-lg" style="color:var(--red)"><use href="#i-cross"></use></svg> Blessures</span></h3><div class="matches" style="font-size:12.3px;color:var(--muted);padding:13px 14px">In-toernooi-uitvallers van sleutelspelers wegen mee in de dagelijkse herziening.</div></div>
+    </div>
+  </div></div>
+
+  <!-- ===== UITLEG ===== -->
+  <div class="view" id="uitleg"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-info"></use></svg> Hoe gemaakt</h2>
+    <div class="note"><b>Vier onafhankelijke analyses</b> (markt/odds · vorm/fitheid · ranking/Elo · historie/klimaat) maakten elk een voorspelling; per uitkomst is de <b>consensus</b> genomen. Daarna een deep-dive op de titel (Opta, Kalshi, Nate Silver) en het toernooipad.</div>
+    <div class="note"><b>Betrouwbaarheid:</b> zeer robuust (4/4) zijn de groepswinnaars, de 8 kwartfinalisten, topscorer Mbappé en Oranje tot de kwartfinale. Verdeeld: de titel zelf (Spanje vóór Frankrijk).<br><br>De wedstrijdvolgorde volgt het officiële FIFA-schema; de eerste doelpuntenmaker is de meest speculatieve laag.</div>
+    <div class="note"><b>Live:</b> elke 30 min ververst de app met echte uitslagen, relevant nieuws uit betrouwbare bronnen en bijgestelde voorspellingen.</div>
+    <footer>POELY · WK-poule '26 — multi-agent ensemble + officieel FIFA-schema.<br>Bronnen: FIFA, ESPN, NOS, Opta, Kalshi, Wikipedia.</footer>
+  </div></div>
+
+  <!-- ===== INSTELLINGEN ===== -->
+  <div class="view" id="instellingen"><div class="wrap">
+    <h2 class="sec"><svg class="bar"><use href="#i-gear"></use></svg> Instellingen</h2>
+    <div class="card" style="margin:0 4px 14px"><div class="matches" style="padding:15px">
+      <div class="setlbl">Thema</div>
+      <div class="seg">
+        <button data-theme-set="light" onclick="poelySetTheme('light')"><svg><use href="#i-flame"></use></svg> Licht</button>
+        <button data-theme-set="dark" onclick="poelySetTheme('dark')"><svg><use href="#i-star"></use></svg> Donker</button>
+      </div>
+    </div></div>
+    <div class="card" style="margin:0 4px 14px"><div class="matches" style="padding:15px">
+      <div class="setlbl">Mijn favoriete land</div>
+      <select class="selteam" id="favSel"></select>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:9px">Wordt overal gemarkeerd in standen &amp; schema.</div>
+    </div></div>
+    <div class="card" style="margin:0 4px 14px"><div class="matches" style="padding:15px">
+      <div class="setlbl">Mijn tips</div>
+      <div style="font-size:11.5px;color:var(--muted);margin-bottom:11px">Vul je eigen scores in op het tabblad <b>Schema</b>. Ze worden lokaal op dit apparaat bewaard.</div>
+      <button class="btn-danger" id="resetTips">Wis al mijn tips</button>
+    </div></div>
+    <div class="note">POELY · WK-poule 2026 — v1.0. Voeg toe aan je beginscherm voor een volledige app-ervaring (fullscreen).</div>
+  </div></div>
+
+  <!-- BOTTOM NAV -->
+  <div class="nav">
+    <button class="on" data-go="vandaag"><svg class="ic"><use href="#i-today"></use></svg>Vandaag</button>
+    <button data-go="schema"><svg class="ic"><use href="#i-list"></use></svg>Schema</button>
+    <button data-go="knockout"><svg class="ic"><use href="#i-cup"></use></svg>Knock-out</button>
+    <button data-go="groepen"><svg class="ic"><use href="#i-bars"></use></svg>Standen</button>
+    <button data-go="meer"><svg class="ic"><use href="#i-more"></use></svg>Meer</button>
+  </div>
+</div>
+
+<script>
+const groups = {
+  A:{cities:"Mexico-Stad · Guadalajara · Monterrey", conf:"m", teams:[
+    {n:"Mexico",p:7,q:1},{n:"Zuid-Korea",p:4,q:2},{n:"Tsjechië",p:4,q:0},{n:"Zuid-Afrika",p:1,q:0}],
+    m:[["Mexico","Zuid-Afrika","2–0","Raúl Jiménez"],["Zuid-Korea","Tsjechië","2–1","Son Heung-min"],
+       ["Tsjechië","Zuid-Afrika","2–1","Patrik Schick"],["Mexico","Zuid-Korea","2–1","Raúl Jiménez"],
+       ["Zuid-Afrika","Zuid-Korea","1–1","Son Heung-min"],["Tsjechië","Mexico","1–1","Raúl Jiménez"]]},
+  B:{cities:"Toronto · Vancouver · Los Angeles", conf:"h", teams:[
+    {n:"Zwitserland",p:7,q:1},{n:"Canada",p:4,q:2},{n:"Bosnië-Herz.",p:4,q:0},{n:"Qatar",p:1,q:0}],
+    m:[["Canada","Bosnië-Herz.","1–1","Lukić"],["Qatar","Zwitserland","1–1","Breel Embolo"],
+       ["Zwitserland","Bosnië-Herz.","2–0","Breel Embolo"],["Canada","Qatar","2–0","Jonathan David"],
+       ["Zwitserland","Canada","2–1","Breel Embolo"],["Bosnië-Herz.","Qatar","2–0","Edin Džeko"]]},
+  C:{cities:"New York · Boston · Miami · Atlanta", conf:"h", teams:[
+    {n:"Brazilië",p:7,q:1},{n:"Marokko",p:7,q:2},{n:"Schotland",p:3,q:3},{n:"Haïti",p:0,q:0}],
+    m:[["Brazilië","Marokko","1–1","Raphinha"],["Haïti","Schotland","0–1","John McGinn"],
+       ["Schotland","Marokko","1–2","En-Nesyri"],["Brazilië","Haïti","3–0","Raphinha"],
+       ["Schotland","Brazilië","1–2","Raphinha"],["Marokko","Haïti","2–0","En-Nesyri"]]},
+  D:{cities:"Los Angeles · Seattle · San Francisco", conf:"h", teams:[
+    {n:"Verenigde Staten",p:9,q:1},{n:"Australië",p:6,q:2},{n:"Turkije",p:3,q:3},{n:"Paraguay",p:0,q:0}],
+    m:[["Verenigde Staten","Paraguay","4–1","Folarin Balogun"],["Australië","Turkije","2–0","Nestory Irankunda"],
+       ["Verenigde Staten","Australië","2–1","Christian Pulisic"],["Turkije","Paraguay","2–0","Kerem Aktürkoğlu"],
+       ["Turkije","Verenigde Staten","1–2","Christian Pulisic"],["Paraguay","Australië","0–2","Mitchell Duke"]]},
+  E:{cities:"Houston · Philadelphia · Toronto", conf:"h", teams:[
+    {n:"Duitsland",p:9,q:1},{n:"Ecuador",p:6,q:2},{n:"Ivoorkust",p:3,q:3},{n:"Curaçao",p:0,q:0}],
+    m:[["Duitsland","Curaçao","7–1","Felix Nmecha"],["Ivoorkust","Ecuador","0–1","Enner Valencia"],
+       ["Duitsland","Ivoorkust","2–1","Nick Woltemade"],["Ecuador","Curaçao","2–1","Enner Valencia"],
+       ["Ecuador","Duitsland","1–2","Nick Woltemade"],["Curaçao","Ivoorkust","1–2","Sébastien Haller"]]},
+  F:{cities:"Dallas · Houston · Kansas City · Monterrey", conf:"h", teams:[
+    {n:"Nederland",p:9,q:1},{n:"Japan",p:6,q:2},{n:"Zweden",p:3,q:3},{n:"Tunesië",p:0,q:0}],
+    m:[["Nederland","Japan","2–1","Memphis Depay"],["Zweden","Tunesië","2–1","Viktor Gyökeres"],
+       ["Nederland","Zweden","2–1","Memphis Depay"],["Tunesië","Japan","1–2","Ayase Ueda"],
+       ["Tunesië","Nederland","0–2","Cody Gakpo"],["Japan","Zweden","2–1","Ayase Ueda"]]},
+  G:{cities:"Seattle · Vancouver · Los Angeles", conf:"h", teams:[
+    {n:"België",p:9,q:1},{n:"Egypte",p:6,q:2},{n:"Iran",p:3,q:3},{n:"Nieuw-Zeeland",p:0,q:0}],
+    m:[["België","Egypte","2–1","Romelu Lukaku"],["Iran","Nieuw-Zeeland","1–0","Mehdi Taremi"],
+       ["België","Iran","2–1","Romelu Lukaku"],["Nieuw-Zeeland","Egypte","0–2","Mohamed Salah"],
+       ["Nieuw-Zeeland","België","0–2","Romelu Lukaku"],["Egypte","Iran","2–1","Mohamed Salah"]]},
+  H:{cities:"Atlanta · Miami · Houston · Guadalajara", conf:"h", teams:[
+    {n:"Spanje",p:9,q:1},{n:"Uruguay",p:6,q:2},{n:"Kaapverdië",p:3,q:0},{n:"Saoedi-Arabië",p:0,q:0}],
+    m:[["Spanje","Kaapverdië","2–0","Mikel Oyarzabal"],["Saoedi-Arabië","Uruguay","1–2","Darwin Núñez"],
+       ["Spanje","Saoedi-Arabië","3–0","Mikel Oyarzabal"],["Uruguay","Kaapverdië","2–0","Darwin Núñez"],
+       ["Uruguay","Spanje","1–2","Lamine Yamal"],["Kaapverdië","Saoedi-Arabië","2–1","Ryan Mendes"]]},
+  I:{cities:"New York · Boston · Philadelphia · Toronto", conf:"m", teams:[
+    {n:"Frankrijk",p:9,q:1},{n:"Senegal",p:6,q:2},{n:"Noorwegen",p:3,q:3},{n:"Irak",p:0,q:0}],
+    m:[["Frankrijk","Senegal","2–1","Kylian Mbappé"],["Irak","Noorwegen","0–2","Erling Haaland"],
+       ["Frankrijk","Irak","3–1","Kylian Mbappé"],["Noorwegen","Senegal","1–2","Sadio Mané"],
+       ["Noorwegen","Frankrijk","1–2","Erling Haaland"],["Senegal","Irak","2–0","Sadio Mané"]]},
+  J:{cities:"Dallas · San Francisco · Kansas City", conf:"m", teams:[
+    {n:"Argentinië",p:9,q:1},{n:"Oostenrijk",p:6,q:2},{n:"Algerije",p:3,q:3},{n:"Jordanië",p:0,q:0}],
+    m:[["Argentinië","Algerije","2–1","Lautaro Martínez"],["Oostenrijk","Jordanië","2–0","Marko Arnautović"],
+       ["Argentinië","Oostenrijk","2–1","Lautaro Martínez"],["Jordanië","Algerije","1–2","Mohamed Amoura"],
+       ["Jordanië","Argentinië","0–2","Lionel Messi"],["Algerije","Oostenrijk","1–2","Marko Arnautović"]]},
+  K:{cities:"Mexico-Stad · Guadalajara · Houston · Miami", conf:"h", teams:[
+    {n:"Portugal",p:9,q:1},{n:"Colombia",p:6,q:2},{n:"DR Congo",p:3,q:3},{n:"Oezbekistan",p:0,q:0}],
+    m:[["Portugal","DR Congo","2–1","Cristiano Ronaldo"],["Oezbekistan","Colombia","0–2","Luis Díaz"],
+       ["Portugal","Oezbekistan","2–0","Cristiano Ronaldo"],["Colombia","DR Congo","2–1","Luis Díaz"],
+       ["Colombia","Portugal","1–2","Bruno Fernandes"],["DR Congo","Oezbekistan","1–0","Cédric Bakambu"]]},
+  L:{cities:"Dallas · Boston · Toronto · New York", conf:"h", teams:[
+    {n:"Engeland",p:9,q:1},{n:"Kroatië",p:6,q:2},{n:"Ghana",p:3,q:0},{n:"Panama",p:0,q:0}],
+    m:[["Engeland","Kroatië","2–1","Harry Kane"],["Ghana","Panama","2–1","Jordan Ayew"],
+       ["Engeland","Ghana","2–1","Harry Kane"],["Panama","Kroatië","0–2","Andrej Kramarić"],
+       ["Panama","Engeland","0–2","Bukayo Saka"],["Kroatië","Ghana","2–1","Andrej Kramarić"]]}
+};
+const confTxt={h:"Hoog",m:"Middel"};
+const matchDates={A:[11,11,18,18,24,24],B:[12,13,18,18,24,24],C:[13,13,19,19,24,24],D:[12,14,19,19,25,25],
+  E:[14,14,20,20,25,25],F:[14,14,20,20,25,25],G:[15,15,21,21,26,26],H:[15,15,21,21,26,26],
+  I:[16,16,22,22,26,26],J:[16,16,22,22,27,27],K:[17,17,23,23,27,27],L:[17,17,23,23,27,27]};
+const played=[
+  ["Mexico – Zuid-Afrika","2–0","2–0","exact"],["Zuid-Korea – Tsjechië","2–1","2–1","exact"],
+  ["Canada – Bosnië-Herz.","2–1","1–1","mis"],["Qatar – Zwitserland","0–2","1–1","mis"],
+  ["Verenigde Staten – Paraguay","1–1","4–1","mis"],["Australië – Turkije","0–2","2–0","mis"],
+  ["Brazilië – Marokko","2–1","1–1","mis"],["Haïti – Schotland","0–2","0–1","goed"]];
+const news=[
+  "Duitsland walst over WK-debutant Curaçao: 7–1 (Curaçao wel z'n eerste WK-goal ooit).",
+  "Australië verraste Turkije (2–0); groep D op z'n kop.",
+  "Brazilië morste punten tegen Marokko (1–1).",
+  "Vanavond 22:00: Nederland–Japan (Oranje-opener)."];
+const changes=[
+  ["14 jun","<b>Groep D:</b> Australië → kandidaat 2e plek (2–0 vs Turkije); Turkije zakt van mijn nr. 2."],
+  ["14 jun","<b>Groep C:</b> Schotland omhoog (3 ptn, koploper); Brazilië &amp; Marokko morsten punten."],
+  ["14 jun","<b>Groep B:</b> helemaal open — alle 4 op 1 punt."],
+  ["14 jun","Schorsingen: Mexico mist César Montes; Zuid-Afrika mist Sithole &amp; Zwane (rode kaarten)."],
+  ["14 jun","<b>Groep D herzien:</b> Australië → 2e (2–0 vs Turkije), Turkije → 3e (beste-3e), Paraguay valt af."],
+  ["14 jun","<b>Groep C herzien:</b> Brazilië 1e &amp; Marokko 2e herstellen na onderling 1–1; Schotland blijft 3e (beste-3e)."],
+  ["14 jun","<b>Knock-out bijgewerkt:</b> 2D=Australië, 3D=Turkije → M74 Duitsland–Turkije, M88 Australië–Egypte, M95 Argentinië–Australië."],
+  ["14 jun 21:00","Duitsland–Curaçao 7–1 (voorspeld 3–0 — uitslag goed). Geen gevolg voor doorgang: groep E ongewijzigd, Duitsland 1e."]];
+const odds=[["Spanje",16],["Frankrijk",15],["Engeland",11],["Argentinië",9.5],["Portugal",9],["Brazilië",8],["Duitsland",5.5],["Nederland",4],["Noorwegen",3],["België",2.3]];
+const I=(id,c)=>`<svg class="${c||'ico'}"><use href="#${id}"></use></svg>`;
+
+// VANDAAG
+function curDay(){const n=new Date();return (n.getFullYear()===2026&&n.getMonth()===5)?n.getDate():14;}
+const sched=[];Object.entries(groups).forEach(([k,g])=>g.m.forEach((mt,i)=>sched.push({d:matchDates[k][i],k,mt})));
+const resMap={};played.forEach(p=>resMap[p[0]]=p[2]);
+function dayLabel(d){let s=new Date(2026,5,d).toLocaleDateString('nl-NL',{weekday:'long',day:'numeric',month:'long'});return s.charAt(0).toUpperCase()+s.slice(1);}
+function dayCards(day){
+  const items=sched.filter(s=>s.d===day);
+  if(!items.length)return '<div class="empty">Geen groepswedstrijden vandaag — bekijk Schema of Knock-out.</div>';
+  return items.map(s=>{const key=s.mt[0]+" – "+s.mt[1];const a=resMap[key];const sc=(a||s.mt[2]).split('–');const done=!!a;
+    const st=done?`<span class="st done">${I('i-check')} Gespeeld</span>`:`<span class="st pred">Voorspelling</span>`;
+    const note=done?`voorspeld: ${s.mt[2]}`:`${I('i-ball')} ${s.mt[3]}`;
+    return `<div class="mcard"><div class="mtop"><span class="gtag">Groep ${s.k}</span>${st}</div>
+      <div class="mmid"><span class="tm">${s.mt[0]}</span><span class="scoreT${done?' done':''}"><b>${sc[0]}</b><i>–</i><b>${sc[1]}</b></span><span class="tm">${s.mt[1]}</span></div>
+      <div class="mnote">${note}</div></div>`;}).join('');
+}
+const cd=curDay();
+document.getElementById('heroDate').textContent=dayLabel(cd);
+document.getElementById('accStat').textContent=played.filter(p=>p[3]==='exact').length+'/'+played.length;
+document.getElementById('newsList').innerHTML=news.map(n=>`<div class="nItem">${I('i-flag')}<span>${n}</span></div>`).join('');
+document.getElementById('todayCards').innerHTML=dayCards(cd);
+document.getElementById('tmrwCards').innerHTML=dayCards(cd+1);
+
+// SCHEMA
+const sl=document.getElementById('schedList');const byDate={};sched.forEach(it=>{(byDate[it.d]=byDate[it.d]||[]).push(it);});
+Object.keys(byDate).map(Number).sort((a,b)=>a-b).forEach(d=>{
+  const rows=byDate[d].map(it=>`<div class="srow"><span class="g">${it.k}</span><span class="pair">${it.mt[0]} – ${it.mt[1]}<span class="scr">${I('i-ball')} ${it.mt[3]}</span></span><span class="sc">${it.mt[2]}</span></div>`).join('');
+  sl.insertAdjacentHTML('beforeend',`<div class="blk"><h4><span class="dot"></span>${dayLabel(d)}</h4>${rows}</div>`);
+});
+
+// STANDEN
+const gg=document.getElementById('groupGrid');
+Object.entries(groups).forEach(([k,g])=>{
+  const rows=g.teams.map((t,i)=>{const cls=t.q===1?'q1':t.q===2?'q2':t.q===3?'q3':'q3x';return `<tr class="${cls}"><td class="pos">${i+1}</td><td><span class="team">${t.n}</span></td><td class="pts">${t.p}</td></tr>`;}).join('');
+  let mt='';[0,1,2].forEach(r=>{mt+=`<div class="rlabel">Speelronde ${r+1}</div>`;[g.m[r*2],g.m[r*2+1]].forEach(x=>{mt+=`<div class="mt"><span>${x[0]} – ${x[1]}<span class="scr">${I('i-ball')} ${x[3]}</span></span><b>${x[2]}</b></div>`;});});
+  gg.insertAdjacentHTML('beforeend',`<div class="card"><h3><span class="ttl">Groep ${k} <span class="conf ${g.conf}">${confTxt[g.conf]}</span></span><span class="ghdr">${g.cities}</span></h3><table><thead><tr><th></th><th>Land</th><th class="pts">Ptn</th></tr></thead><tbody>${rows}</tbody></table><div class="matches">${mt}</div></div>`);
+});
+
+// THIRDS chips
+const tin=[["Schotland","C"],["Turkije","D"],["Ivoorkust","E"],["Zweden","F"],["Iran","G"],["Noorwegen","I"],["Algerije","J"],["DR Congo","K"]];
+const tout=[["Tsjechië","A"],["Bosnië-Herz.","B"],["Kaapverdië","H"],["Ghana","L"]];
+document.getElementById('thirdsIn').innerHTML=tin.map(t=>`<span class="chip" style="border-color:var(--gold);color:var(--gold)">${t[0]} · ${t[1]}</span>`).join('');
+document.getElementById('thirdsOut').innerHTML=tout.map(t=>`<span class="chip">${t[0]} · ${t[1]}</span>`).join('');
+
+// ORANJE
+document.getElementById('oranjeRoute').innerHTML=[
+  ["Groepsfase — 1e plaats","9 punten",""],["Nederland – Japan","2–1","Memphis Depay"],["Nederland – Zweden","2–1","Memphis Depay"],
+  ["Tunesië – Nederland","0–2","Cody Gakpo"],["R32 (M75): Nederland – Marokko","2–1","Memphis Depay"],
+  ["1/8 (M90): Nederland – Zuid-Korea","2–0","Cody Gakpo"],["KF (M97): Nederland – Frankrijk","1–2","Cody Gakpo"]
+].map(x=>`<div class="mt"><span>${x[0]}${x[2]?`<span class="scr">${I('i-ball')} ${x[2]}</span>`:''}</span><b>${x[1]}</b></div>`).join('');
+
+// KNOCKOUT
+const bracketR32=[
+  [73,"Zuid-Korea","2A","Canada","2B","2–1","Son Heung-min"],[74,"Duitsland","1E","Turkije","3D","2–1","Nick Woltemade"],
+  [75,"Nederland","1F","Marokko","2C","2–1","Memphis Depay"],[76,"Brazilië","1C","Japan","2F","2–1","Raphinha"],
+  [77,"Frankrijk","1I","Zweden","3F","3–0","Kylian Mbappé"],[78,"Senegal","2I","Ecuador","2E","2–1","Sadio Mané"],
+  [79,"Mexico","1A","Schotland","3C","2–1","Raúl Jiménez"],[80,"Engeland","1L","DR Congo","3K","3–0","Harry Kane"],
+  [81,"Verenigde Staten","1D","Ivoorkust","3E","2–1","Christian Pulisic"],[82,"België","1G","Algerije","3J","2–1","Romelu Lukaku"],
+  [83,"Colombia","2K","Kroatië","2L","2–1","Luis Díaz"],[84,"Spanje","1H","Oostenrijk","2J","2–0","Mikel Oyarzabal"],
+  [85,"Zwitserland","1B","Iran","3G","2–0","Breel Embolo"],[86,"Argentinië","1J","Uruguay","2H","2–1","Lautaro Martínez"],
+  [87,"Portugal","1K","Noorwegen","3I","2–1","Cristiano Ronaldo"],[88,"Australië","2D","Egypte","2G","2–1","Mitchell Duke"]];
+const bracketLater={
+  "Achtste finale":[[89,"Frankrijk","Duitsland","2–1","Kylian Mbappé"],[90,"Nederland","Zuid-Korea","2–0","Cody Gakpo"],
+    [91,"Brazilië","Senegal","2–1","Vinícius Júnior"],[92,"Engeland","Mexico","2–1","Harry Kane"],
+    [93,"Spanje","Colombia","2–0","Lamine Yamal"],[94,"België","Verenigde Staten","2–1","Romelu Lukaku"],
+    [95,"Argentinië","Australië","2–0","Lautaro Martínez"],[96,"Portugal","Zwitserland","2–1","Cristiano Ronaldo"]],
+  "Kwartfinale":[[97,"Frankrijk","Nederland","2–1","Kylian Mbappé"],[98,"Spanje","België","2–0","Mikel Oyarzabal"],
+    [99,"Engeland","Brazilië","2–1","Harry Kane"],[100,"Argentinië","Portugal","2–1","Lionel Messi"]],
+  "Halve finale":[[101,"Spanje","Frankrijk","2–1","Lamine Yamal"],[102,"Engeland","Argentinië","2–1","Harry Kane"]],
+  "Finale":[[104,"Spanje","Engeland","2–1","Mikel Oyarzabal"]]};
+const thirdPlace=[103,"Frankrijk","Argentinië","2–1","Kylian Mbappé"];
+const bw=document.getElementById('bracket');
+function tieHTML(no,w,l,score,scorer,ws,ls){const sc=score.split('–');
+  return `<div class="tie"><div class="mno">Wedstrijd ${no}</div><div class="row w"><span>${w}${ws?`<span class="slot">${ws}</span>`:''}</span><span class="sc">${sc[0]}</span></div><div class="row"><span>${l}${ls?`<span class="slot">${ls}</span>`:''}</span><span class="sc">${sc[1]}</span></div><div class="srf">${I('i-ball')} ${scorer}</div></div>`;}
+bw.insertAdjacentHTML('beforeend',`<div class="round"><h4>Ronde van 32</h4>${bracketR32.map(m=>tieHTML(m[0],m[1],m[3],m[5],m[6],m[2],m[4])).join('')}</div>`);
+Object.entries(bracketLater).forEach(([round,ties])=>{let html=ties.map(m=>tieHTML(m[0],m[1],m[2],m[3],m[4])).join('');
+  if(round==="Finale"){html+=`<div style="margin-top:12px;font-family:var(--disp);font-size:10px;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;font-weight:800">Troostfinale · 3e plaats</div>`+tieHTML(thirdPlace[0],thirdPlace[1],thirdPlace[2],thirdPlace[3],thirdPlace[4]);}
+  bw.insertAdjacentHTML('beforeend',`<div class="round"><h4>${round}</h4>${html}</div>`);});
+
+// REFRESH
+const badge={exact:`<span style="color:var(--win)">${I('i-check')} exact</span>`,goed:`<span style="color:var(--gold)">${I('i-check')} uitslag</span>`,mis:`<span style="color:var(--red)">${I('i-x')}</span>`};
+document.getElementById('refTable').innerHTML=played.map(p=>`<tr><td>${p[0]}</td><td class="pts" style="color:var(--muted)">${p[1]}</td><td class="pts"><b>${p[2]}</b></td><td style="text-align:right">${badge[p[3]]}</td></tr>`).join('');
+document.getElementById('changeLog').innerHTML=changes.map(c=>`<div class="mt" style="display:block"><span style="font-family:var(--disp);color:var(--blue);font-size:10px;font-weight:800;margin-right:8px">${c[0]}</span>${c[1]}</div>`).join('');
+
+// ODDS
+document.getElementById('oddsBody').innerHTML=odds.map((o,i)=>`<tr ${i===0?'style="background:rgba(204,248,63,.20)"':''}><td class="pos">${i+1}</td><td><span style="${i===0?'font-weight:700':''}">${o[0]}</span></td><td class="pts">${o[1]}%</td></tr>`).join('');
+
+// NAV
+const navBtns=[...document.querySelectorAll('.nav button')];
+function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));const el=document.getElementById(id);if(el)el.classList.add('active');
+  const ids=navBtns.map(b=>b.dataset.go);const act=ids.includes(id)?id:'meer';navBtns.forEach(b=>b.classList.toggle('on',b.dataset.go===act));window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.go)));
+</script>
+<script>
+/* POELY WK-poule — immersieve laag (additief, draait na bestaande JS). */
+(function(){
+  "use strict";
+  try {
+    var doc = document;
+    if (!doc || !doc.body) return;
+    var reduce = false;
+    try { reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch(e){}
+
+    var css = ''
+      + '.sx-pre{opacity:0;transform:translateY(14px);will-change:opacity,transform}'
+      + '.sx-in{opacity:1;transform:none;transition:opacity .5s cubic-bezier(.22,.61,.36,1),transform .55s cubic-bezier(.22,.61,.36,1)}'
+      + '.sx-pop{animation:sxPop .42s cubic-bezier(.34,1.56,.64,1)}'
+      + '@keyframes sxPop{0%{transform:scale(.6);opacity:.4}60%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}'
+      + '.sx-navind{position:absolute;top:6px;bottom:6px;border-radius:14px;background:var(--lime);z-index:0;transition:left .34s cubic-bezier(.34,1.3,.5,1),width .34s cubic-bezier(.34,1.3,.5,1);pointer-events:none}'
+      + '.nav button{position:relative;z-index:1}'
+      + '.nav button.on{background:transparent !important}'
+      + '.nav button.sx-tap{transform:scale(.9)}'
+      + '.hero{will-change:transform}.hero h1{will-change:transform}';
+    if (reduce) { css = '.sx-pre{opacity:1 !important;transform:none !important}'; }
+    var st = doc.createElement('style');
+    st.setAttribute('data-sx','immersive'); st.textContent = css;
+    (doc.head||doc.body).appendChild(st);
+
+    var REVEAL_SEL = '.mcard,.newscard,.card,.srow,.tie,.prize,.mbtn,.note,.legend,.chip';
+    function isNum(s){ return /^-?\d+$/.test((s||'').trim()); }
+
+    function animateScores(view){
+      if (!view || reduce) return;
+      var bs; try { bs = view.querySelectorAll('.scoreT b'); } catch(e){ return; }
+      if (!bs || !bs.length) return;
+      Array.prototype.forEach.call(bs, function(b, idx){
+        if (!b || b.getAttribute('data-sx-done') === '1') return;
+        var raw = b.textContent;
+        if (!isNum(raw)) { b.setAttribute('data-sx-done','1'); return; }
+        var target = parseInt(raw, 10);
+        b.setAttribute('data-sx-done','1');
+        var delay = 80 * idx;
+        setTimeout(function(){
+          if (!b.isConnected) return;
+          b.classList.remove('sx-pop'); void b.offsetWidth; b.classList.add('sx-pop');
+        }, delay);
+        if (target > 0) {
+          var steps = Math.min(target, 8); var i = 0; b.textContent = '0';
+          var iv = setInterval(function(){
+            i++; if (!b.isConnected) { clearInterval(iv); return; }
+            b.textContent = String(Math.round(target * (i / steps)));
+            if (i >= steps) { clearInterval(iv); b.textContent = String(target); }
+          }, 45);
+        }
+      });
+    }
+    function revealView(view){
+      if (!view) return;
+      var nodes; try { nodes = view.querySelectorAll(REVEAL_SEL); } catch(e){ return; }
+      if (!nodes || !nodes.length) return;
+      Array.prototype.forEach.call(nodes, function(n, i){
+        if (!n || n.getAttribute('data-sx-rev') === '1') return;
+        n.setAttribute('data-sx-rev','1');
+        if (reduce) return;
+        n.classList.add('sx-pre');
+        var d = Math.min(i, 14) * 55;
+        setTimeout(function(){ if (!n.isConnected) return; n.classList.add('sx-in'); n.classList.remove('sx-pre'); }, d + 20);
+      });
+    }
+    var io = null;
+    if (!reduce && 'IntersectionObserver' in window) {
+      io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if (en.isIntersecting && en.target){ en.target.classList.add('sx-in'); en.target.classList.remove('sx-pre'); io.unobserve(en.target); } });
+      }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    }
+    function processView(view){ if (!view) return; revealView(view); animateScores(view); }
+    function activeView(){ return doc.querySelector('.view.active'); }
+
+    var navEl = doc.querySelector('.nav'); var navInd = null;
+    function buildNavIndicator(){
+      if (reduce || !navEl) return;
+      try { navInd = doc.createElement('span'); navInd.className = 'sx-navind'; navEl.insertBefore(navInd, navEl.firstChild); moveNavIndicator(); } catch(e){ navInd = null; }
+    }
+    function moveNavIndicator(){
+      if (!navInd || !navEl) return;
+      var on = navEl.querySelector('button.on');
+      if (!on){ navInd.style.opacity = '0'; return; }
+      navInd.style.opacity = '1'; navInd.style.left = on.offsetLeft + 'px'; navInd.style.width = on.offsetWidth + 'px';
+    }
+    var hero = doc.querySelector('.hero'); var heroH1 = hero ? hero.querySelector('h1') : null; var ticking = false;
+    function onScroll(){
+      if (reduce || !hero || ticking) return; ticking = true;
+      window.requestAnimationFrame(function(){
+        var y = window.pageYOffset || doc.documentElement.scrollTop || 0; var p = Math.max(0, Math.min(y, 240));
+        hero.style.transform = 'translateY(' + (p * 0.18) + 'px)';
+        if (heroH1) heroH1.style.transform = 'translateY(' + (p * 0.10) + 'px)';
+        ticking = false;
+      });
+    }
+    function hookClicks(){
+      var goers; try { goers = doc.querySelectorAll('[data-go], .nav button'); } catch(e){ return; }
+      if (!goers) return;
+      Array.prototype.forEach.call(goers, function(btn){
+        if (!btn || btn.getAttribute('data-sx-hook') === '1') return;
+        btn.setAttribute('data-sx-hook','1');
+        btn.addEventListener('click', function(){
+          if (!reduce && btn.matches && btn.matches('.nav button')){ btn.classList.add('sx-tap'); setTimeout(function(){ btn.classList.remove('sx-tap'); }, 200); }
+          setTimeout(function(){
+            var v = activeView(); processView(v);
+            if (io && v){ try { var pend = v.querySelectorAll('.sx-pre'); Array.prototype.forEach.call(pend, function(n){ io.observe(n); }); } catch(e){} }
+            moveNavIndicator();
+            if (hero) hero.style.transform = ''; if (heroH1) heroH1.style.transform = '';
+          }, 30);
+        }, false);
+      });
+    }
+    function init(){
+      hookClicks(); buildNavIndicator(); processView(activeView());
+      if (!reduce){ window.addEventListener('scroll', onScroll, { passive: true }); }
+      window.addEventListener('resize', function(){ moveNavIndicator(); }, { passive: true });
+      setTimeout(moveNavIndicator, 120); setTimeout(moveNavIndicator, 600);
+    }
+    if (doc.readyState === 'loading') { doc.addEventListener('DOMContentLoaded', init, { once: true }); }
+    else { setTimeout(init, 0); }
+  } catch (err) { if (window.console && console.warn) console.warn('POELY immersive layer skipped:', err); }
+})();
+</script>
+
+<script>
+/* welkomstscherm: nav verbergen + reactieve kleur-glow */
+(function(){
+  var nav=document.querySelector('.nav');
+  function upd(){var w=document.getElementById('welkom');var on=w&&w.classList.contains('active');if(nav)nav.style.display=on?'none':'';}
+  document.querySelectorAll('[data-go]').forEach(function(b){b.addEventListener('click',function(){setTimeout(upd,40);});});
+  upd();
+  var cov=document.querySelector('.cover');
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(cov&&!reduce){
+    cov.addEventListener('pointermove',function(e){var r=cov.getBoundingClientRect();
+      cov.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+      cov.style.setProperty('--my',((e.clientY-r.top)/r.height*100)+'%');},{passive:true});
+  }
+})();
+</script>
+<script id="pro-features">
+/* POELY — pro UX-laag: thema, favoriet land, interactieve tips, instellingen, toast. Additief & defensief. */
+(function(){
+  "use strict";
+  function ls(){try{return window.localStorage}catch(e){return null}}
+  var L=ls();
+  function gv(k,d){if(!L)return d;try{var v=L.getItem(k);return v===null?d:v}catch(e){return d}}
+  function sv(k,v){if(L)try{L.setItem(k,v)}catch(e){}}
+  function picks(){try{return JSON.parse(gv('poely_picks','{}'))||{}}catch(e){return {}}}
+
+  /* THEMA */
+  function apply(t){var d=(t==='dark')?'dark':'light';document.documentElement.setAttribute('data-theme',d);var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',d==='dark'?'#0b1226':'#2f6bff');}
+  var theme=gv('poely_theme','light'); apply(theme);
+  window.poelySetTheme=function(t){theme=(t==='dark')?'dark':'light';apply(theme);sv('poely_theme',theme);segUpd();toast(theme==='dark'?'Donker thema aan':'Licht thema aan');};
+  function segUpd(){document.querySelectorAll('[data-theme-set]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-theme-set')===theme)});}
+
+  /* TOAST */
+  var te;function toast(m){if(!te){te=document.createElement('div');te.className='toast';document.body.appendChild(te);}te.textContent=m;te.classList.add('show');clearTimeout(te._t);te._t=setTimeout(function(){te.classList.remove('show')},1800);}
+
+  /* FAVORIET */
+  var fav=gv('poely_fav','');
+  function pairText(r){var p=r.querySelector('.pair');return (p&&p.childNodes[0]&&p.childNodes[0].nodeValue)?p.childNodes[0].nodeValue.trim():''}
+  function buildFav(){var sel=document.getElementById('favSel');if(!sel)return;var names=[];document.querySelectorAll('#groupGrid .team').forEach(function(e){var n=e.textContent.trim();if(n&&names.indexOf(n)<0)names.push(n)});names.sort();sel.innerHTML='<option value="">— kies je land —</option>'+names.map(function(n){return '<option value="'+n+'"'+(n===fav?' selected':'')+'>'+n+'</option>'}).join('');sel.addEventListener('change',function(){fav=sel.value;sv('poely_fav',fav);applyFav();toast(fav?('Favoriet: '+fav):'Favoriet gewist')});}
+  function applyFav(){
+    document.querySelectorAll('#groupGrid tbody tr').forEach(function(tr){var t=tr.querySelector('.team');if(!t)return;var on=!!fav&&t.textContent.trim().replace(/^★/,'')===fav;tr.classList.toggle('fav-row',on);var st=t.querySelector('.fav-star');if(on&&!st){var s=document.createElement('span');s.className='fav-star';s.textContent='★';t.insertBefore(s,t.firstChild);}else if(!on&&st){st.remove();}});
+    document.querySelectorAll('#schedList .srow').forEach(function(r){var txt=pairText(r);r.classList.toggle('fav-row',!!fav&&txt.indexOf(fav)>=0)});
+  }
+
+  /* INTERACTIEVE TIPS */
+  var total=0;
+  function norm(s){return (s||'').replace(/\s/g,'')}
+  function initTips(){
+    var rows=document.querySelectorAll('#schedList .srow');if(!rows.length)return;
+    var pk=picks();total=0;
+    rows.forEach(function(r){
+      if(r.getAttribute('data-tip')==='1')return; r.setAttribute('data-tip','1');
+      var grp=((r.querySelector('.g')||{}).textContent||'').trim();
+      var pt=pairText(r); var id=grp+'|'+pt; total++;
+      var poely=norm((r.querySelector('.sc')||{}).textContent||'');
+      var cur=pk[id]||''; var h=cur?cur.split('–'):['',''];
+      var tr=document.createElement('div'); tr.className='tiprow'; tr.setAttribute('data-id',id);
+      tr.innerHTML='<label>Jouw tip</label><input type="number" min="0" max="20" inputmode="numeric" value="'+(h[0]||'')+'"><span class="dash">–</span><input type="number" min="0" max="20" inputmode="numeric" value="'+(h[1]||'')+'"><span class="hit">✓ zelfde als POELY</span>';
+      r.insertAdjacentElement('afterend',tr);
+      var ins=tr.querySelectorAll('input');
+      function save(){var a=ins[0].value,b=ins[1].value;var p=picks();if(a!==''&&b!==''){var val=a+'–'+b;p[id]=val;tr.classList.toggle('hit',val===poely);}else{delete p[id];tr.classList.remove('hit');}sv('poely_picks',JSON.stringify(p));prog();}
+      ins.forEach(function(i){i.addEventListener('input',save)});
+      if(cur){tr.classList.toggle('hit',norm(cur)===poely)}
+    });
+    var sch=document.getElementById('schedList');
+    if(sch&&sch.parentNode&&!document.getElementById('tipbar')){
+      var bar=document.createElement('div');bar.className='tipbar';bar.id='tipbar';
+      bar.innerHTML='<b>Mijn tips</b><span class="pbar"><i></i></span><span id="tipcount">0/'+total+'</span>';
+      sch.parentNode.insertBefore(bar,sch);
+    }
+    prog();
+  }
+  function prog(){var n=Object.keys(picks()).length;var c=document.getElementById('tipcount');if(c)c.textContent=n+'/'+(total||72);var i=document.querySelector('#tipbar .pbar i');if(i)i.style.width=Math.min(100,Math.round(n/(total||72)*100))+'%';}
+  function wireReset(){var b=document.getElementById('resetTips');if(b)b.addEventListener('click',function(){sv('poely_picks','{}');document.querySelectorAll('.tiprow input').forEach(function(i){i.value=''});document.querySelectorAll('.tiprow').forEach(function(t){t.classList.remove('hit')});prog();toast('Mijn tips gewist')})}
+
+  function init(){segUpd();buildFav();applyFav();initTips();wireReset();}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else setTimeout(init,60);
+})();
+</script>
+
+</body>
+</html>
