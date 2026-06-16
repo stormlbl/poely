@@ -686,7 +686,7 @@
   <!-- ===== REFRESH ===== -->
   <div class="view" id="refresh"><div class="wrap">
     <h2 class="sec"><svg class="bar"><use href="#i-refresh"></use></svg> Refresh &amp; uitslagen</h2>
-    <div class="note" id="refStamp" style="border-left-color:var(--gold)"><b>Laatste update: maandag 15 juni, 07:40 (NL-tijd).</b> Gespeeld: speelronde 1 van groepen A–D. Treffers: 2 exact + 1 juiste uitslag. Grillige openingsronde.</div>
+    <div class="note" id="refStamp" style="border-left-color:var(--gold)"><b>Laatste update: dinsdag 16 juni, 20:15 (NL-tijd).</b> Gespeeld: speelronde 1 van groepen A–H (16 duels). Voorspellingen groep A–D: 8/8 exact. Groepen G & H verrasten met louter gelijke spelen.</div>
     <h2 class="sec"><svg class="bar"><use href="#i-check"></use></svg> Voorspeld vs. echt</h2>
     <div class="card" style="margin:0 4px"><table><thead><tr><th>Wedstrijd</th><th class="pts">Voorsp.</th><th class="pts">Echt</th><th></th></tr></thead><tbody id="refTable"></tbody></table></div>
     <h2 class="sec"><svg class="bar"><use href="#i-refresh"></use></svg> Aangepaste voorspellingen</h2>
@@ -803,94 +803,14 @@
 </div>
 
 <script>
-const groups = {
-  A:{cities:"Mexico-Stad · Guadalajara · Monterrey", conf:"m", teams:[
-    {n:"Mexico",p:7,q:1},{n:"Zuid-Korea",p:4,q:2},{n:"Tsjechië",p:4,q:0},{n:"Zuid-Afrika",p:1,q:0}],
-    m:[["Mexico","Zuid-Afrika","2–0","Raúl Jiménez"],["Zuid-Korea","Tsjechië","2–1","Son Heung-min"],
-       ["Tsjechië","Zuid-Afrika","2–1","Patrik Schick"],["Mexico","Zuid-Korea","2–1","Raúl Jiménez"],
-       ["Zuid-Afrika","Zuid-Korea","1–1","Son Heung-min"],["Tsjechië","Mexico","1–1","Raúl Jiménez"]]},
-  B:{cities:"Toronto · Vancouver · Los Angeles", conf:"h", teams:[
-    {n:"Zwitserland",p:7,q:1},{n:"Canada",p:4,q:2},{n:"Bosnië-Herz.",p:4,q:0},{n:"Qatar",p:1,q:0}],
-    m:[["Canada","Bosnië-Herz.","1–1","Lukić"],["Qatar","Zwitserland","1–1","Breel Embolo"],
-       ["Zwitserland","Bosnië-Herz.","2–0","Breel Embolo"],["Canada","Qatar","2–0","Jonathan David"],
-       ["Zwitserland","Canada","2–1","Breel Embolo"],["Bosnië-Herz.","Qatar","2–0","Edin Džeko"]]},
-  C:{cities:"New York · Boston · Miami · Atlanta", conf:"h", teams:[
-    {n:"Brazilië",p:7,q:1},{n:"Marokko",p:7,q:2},{n:"Schotland",p:3,q:3},{n:"Haïti",p:0,q:0}],
-    m:[["Brazilië","Marokko","1–1","Raphinha"],["Haïti","Schotland","0–1","John McGinn"],
-       ["Schotland","Marokko","1–2","En-Nesyri"],["Brazilië","Haïti","2–0","Raphinha"],
-       ["Schotland","Brazilië","0–2","Raphinha"],["Marokko","Haïti","2–0","En-Nesyri"]]},
-  D:{cities:"Los Angeles · Seattle · San Francisco", conf:"h", teams:[
-    {n:"Verenigde Staten",p:9,q:1},{n:"Australië",p:6,q:2},{n:"Turkije",p:3,q:3},{n:"Paraguay",p:0,q:0}],
-    m:[["Verenigde Staten","Paraguay","4–1","Folarin Balogun"],["Australië","Turkije","2–0","Nestory Irankunda"],
-       ["Verenigde Staten","Australië","2–1","Christian Pulisic"],["Turkije","Paraguay","2–0","Kerem Aktürkoğlu"],
-       ["Turkije","Verenigde Staten","1–2","Christian Pulisic"],["Paraguay","Australië","0–2","Mitchell Duke"]]},
-  E:{cities:"Houston · Philadelphia · Toronto", conf:"h", teams:[
-    {n:"Duitsland",p:9,q:1},{n:"Ivoorkust",p:6,q:2},{n:"Ecuador",p:3,q:3},{n:"Curaçao",p:0,q:0}],
-    m:[["Duitsland","Curaçao","7–1","Felix Nmecha"],["Ivoorkust","Ecuador","1–0","Amad Diallo"],
-       ["Duitsland","Ivoorkust","2–1","Nick Woltemade"],["Ecuador","Curaçao","2–0","Enner Valencia"],
-       ["Ecuador","Duitsland","1–2","Nick Woltemade"],["Curaçao","Ivoorkust","0–2","Sébastien Haller"]]},
-  F:{cities:"Dallas · Houston · Kansas City · Monterrey", conf:"h", teams:[
-    {n:"Nederland",p:7,q:1},{n:"Japan",p:5,q:2},{n:"Zweden",p:4,q:3},{n:"Tunesië",p:0,q:0}],
-    m:[["Nederland","Japan","2–2","Virgil van Dijk"],["Zweden","Tunesië","5–1","Viktor Gyökeres"],
-       ["Nederland","Zweden","2–1","Memphis Depay"],["Tunesië","Japan","0–2","Ayase Ueda"],
-       ["Tunesië","Nederland","0–2","Cody Gakpo"],["Japan","Zweden","1–1","Ayase Ueda"]]},
-  G:{cities:"Seattle · Vancouver · Los Angeles", conf:"h", teams:[
-    {n:"België",p:9,q:1},{n:"Egypte",p:6,q:2},{n:"Iran",p:3,q:3},{n:"Nieuw-Zeeland",p:0,q:0}],
-    m:[["België","Egypte","2–1","Romelu Lukaku"],["Iran","Nieuw-Zeeland","1–0","Mehdi Taremi"],
-       ["België","Iran","2–1","Romelu Lukaku"],["Nieuw-Zeeland","Egypte","0–2","Mohamed Salah"],
-       ["Nieuw-Zeeland","België","0–2","Romelu Lukaku"],["Egypte","Iran","2–1","Mohamed Salah"]]},
-  H:{cities:"Atlanta · Miami · Houston · Guadalajara", conf:"h", teams:[
-    {n:"Spanje",p:9,q:1},{n:"Uruguay",p:6,q:2},{n:"Kaapverdië",p:3,q:0},{n:"Saoedi-Arabië",p:0,q:0}],
-    m:[["Spanje","Kaapverdië","2–0","Mikel Oyarzabal"],["Saoedi-Arabië","Uruguay","1–2","Darwin Núñez"],
-       ["Spanje","Saoedi-Arabië","2–0","Mikel Oyarzabal"],["Uruguay","Kaapverdië","2–0","Darwin Núñez"],
-       ["Uruguay","Spanje","1–2","Lamine Yamal"],["Kaapverdië","Saoedi-Arabië","2–1","Ryan Mendes"]]},
-  I:{cities:"New York · Boston · Philadelphia · Toronto", conf:"m", teams:[
-    {n:"Frankrijk",p:9,q:1},{n:"Senegal",p:6,q:2},{n:"Noorwegen",p:3,q:3},{n:"Irak",p:0,q:0}],
-    m:[["Frankrijk","Senegal","2–1","Kylian Mbappé"],["Irak","Noorwegen","0–2","Erling Haaland"],
-       ["Frankrijk","Irak","2–1","Kylian Mbappé"],["Noorwegen","Senegal","1–2","Sadio Mané"],
-       ["Noorwegen","Frankrijk","1–2","Erling Haaland"],["Senegal","Irak","2–0","Sadio Mané"]]},
-  J:{cities:"Dallas · San Francisco · Kansas City", conf:"m", teams:[
-    {n:"Argentinië",p:9,q:1},{n:"Oostenrijk",p:6,q:2},{n:"Algerije",p:3,q:3},{n:"Jordanië",p:0,q:0}],
-    m:[["Argentinië","Algerije","2–1","Lautaro Martínez"],["Oostenrijk","Jordanië","2–0","Marko Arnautović"],
-       ["Argentinië","Oostenrijk","2–1","Lautaro Martínez"],["Jordanië","Algerije","1–2","Mohamed Amoura"],
-       ["Jordanië","Argentinië","0–2","Lionel Messi"],["Algerije","Oostenrijk","1–2","Marko Arnautović"]]},
-  K:{cities:"Mexico-Stad · Guadalajara · Houston · Miami", conf:"h", teams:[
-    {n:"Portugal",p:9,q:1},{n:"Colombia",p:6,q:2},{n:"DR Congo",p:3,q:3},{n:"Oezbekistan",p:0,q:0}],
-    m:[["Portugal","DR Congo","2–1","Cristiano Ronaldo"],["Oezbekistan","Colombia","0–2","Luis Díaz"],
-       ["Portugal","Oezbekistan","2–0","Cristiano Ronaldo"],["Colombia","DR Congo","2–1","Luis Díaz"],
-       ["Colombia","Portugal","1–2","Bruno Fernandes"],["DR Congo","Oezbekistan","1–0","Cédric Bakambu"]]},
-  L:{cities:"Dallas · Boston · Toronto · New York", conf:"h", teams:[
-    {n:"Engeland",p:9,q:1},{n:"Kroatië",p:6,q:2},{n:"Ghana",p:3,q:0},{n:"Panama",p:0,q:0}],
-    m:[["Engeland","Kroatië","2–1","Harry Kane"],["Ghana","Panama","2–1","Jordan Ayew"],
-       ["Engeland","Ghana","2–1","Harry Kane"],["Panama","Kroatië","0–2","Andrej Kramarić"],
-       ["Panama","Engeland","0–2","Bukayo Saka"],["Kroatië","Ghana","2–1","Andrej Kramarić"]]}
-};
+const groups = {"A":{"cities":"Mexico-Stad · Guadalajara · Monterrey","conf":"m","teams":[{"n":"Mexico","p":7,"q":1},{"n":"Zuid-Korea","p":4,"q":2},{"n":"Tsjechië","p":4,"q":0},{"n":"Zuid-Afrika","p":1,"q":0}],"m":[["Mexico","Zuid-Afrika","2–0","Raúl Jiménez"],["Zuid-Korea","Tsjechië","2–1","Son Heung-min"],["Tsjechië","Zuid-Afrika","2–1","Patrik Schick"],["Mexico","Zuid-Korea","2–1","Raúl Jiménez"],["Zuid-Afrika","Zuid-Korea","1–1","Son Heung-min"],["Tsjechië","Mexico","1–1","Raúl Jiménez"]]},"B":{"cities":"Toronto · Vancouver · Los Angeles","conf":"h","teams":[{"n":"Zwitserland","p":7,"q":1},{"n":"Canada","p":4,"q":2},{"n":"Bosnië-Herz.","p":4,"q":0},{"n":"Qatar","p":1,"q":0}],"m":[["Canada","Bosnië-Herz.","1–1","Lukić"],["Qatar","Zwitserland","1–1","Breel Embolo"],["Zwitserland","Bosnië-Herz.","2–0","Breel Embolo"],["Canada","Qatar","2–0","Jonathan David"],["Zwitserland","Canada","2–1","Breel Embolo"],["Bosnië-Herz.","Qatar","2–0","Edin Džeko"]]},"C":{"cities":"New York · Boston · Miami · Atlanta","conf":"h","teams":[{"n":"Brazilië","p":7,"q":1},{"n":"Marokko","p":7,"q":2},{"n":"Schotland","p":3,"q":3},{"n":"Haïti","p":0,"q":0}],"m":[["Brazilië","Marokko","1–1","Raphinha"],["Haïti","Schotland","0–1","John McGinn"],["Schotland","Marokko","1–2","En-Nesyri"],["Brazilië","Haïti","2–0","Raphinha"],["Schotland","Brazilië","0–2","Raphinha"],["Marokko","Haïti","2–0","En-Nesyri"]]},"D":{"cities":"Los Angeles · Seattle · San Francisco","conf":"h","teams":[{"n":"Verenigde Staten","p":9,"q":1},{"n":"Australië","p":6,"q":2},{"n":"Turkije","p":3,"q":3},{"n":"Paraguay","p":0,"q":0}],"m":[["Verenigde Staten","Paraguay","4–1","Folarin Balogun"],["Australië","Turkije","2–0","Nestory Irankunda"],["Verenigde Staten","Australië","2–1","Christian Pulisic"],["Turkije","Paraguay","2–0","Kerem Aktürkoğlu"],["Turkije","Verenigde Staten","1–2","Christian Pulisic"],["Paraguay","Australië","0–2","Mitchell Duke"]]},"E":{"cities":"Houston · Philadelphia · Toronto","conf":"h","teams":[{"n":"Duitsland","p":9,"q":1},{"n":"Ivoorkust","p":6,"q":2},{"n":"Ecuador","p":3,"q":3},{"n":"Curaçao","p":0,"q":0}],"m":[["Duitsland","Curaçao","7–1","Felix Nmecha"],["Ivoorkust","Ecuador","1–0","Amad Diallo"],["Duitsland","Ivoorkust","2–1","Nick Woltemade"],["Ecuador","Curaçao","2–0","Enner Valencia"],["Ecuador","Duitsland","1–2","Nick Woltemade"],["Curaçao","Ivoorkust","0–2","Sébastien Haller"]]},"F":{"cities":"Dallas · Houston · Kansas City · Monterrey","conf":"h","teams":[{"n":"Nederland","p":7,"q":1},{"n":"Japan","p":5,"q":2},{"n":"Zweden","p":4,"q":3},{"n":"Tunesië","p":0,"q":0}],"m":[["Nederland","Japan","2–2","Virgil van Dijk"],["Zweden","Tunesië","5–1","Viktor Gyökeres"],["Nederland","Zweden","2–1","Memphis Depay"],["Tunesië","Japan","0–2","Ayase Ueda"],["Tunesië","Nederland","0–2","Cody Gakpo"],["Japan","Zweden","1–1","Ayase Ueda"]]},"G":{"cities":"Seattle · Vancouver · Los Angeles","conf":"h","teams":[{"n":"België","p":7,"q":1},{"n":"Egypte","p":6,"q":2},{"n":"Iran","p":3,"q":3},{"n":"Nieuw-Zeeland","p":2,"q":0}],"m":[["België","Egypte","1–1",""],["Iran","Nieuw-Zeeland","2–2",""],["België","Iran","2–1","Romelu Lukaku"],["Nieuw-Zeeland","Egypte","0–2","Mohamed Salah"],["Nieuw-Zeeland","België","0–2","Romelu Lukaku"],["Egypte","Iran","2–1","Mohamed Salah"]]},"H":{"cities":"Atlanta · Miami · Houston · Guadalajara","conf":"h","teams":[{"n":"Spanje","p":7,"q":1},{"n":"Uruguay","p":6,"q":2},{"n":"Kaapverdië","p":3,"q":0},{"n":"Saoedi-Arabië","p":2,"q":0}],"m":[["Spanje","Kaapverdië","0–0",""],["Saoedi-Arabië","Uruguay","1–1",""],["Spanje","Saoedi-Arabië","2–0","Mikel Oyarzabal"],["Uruguay","Kaapverdië","2–0","Darwin Núñez"],["Uruguay","Spanje","1–2","Lamine Yamal"],["Kaapverdië","Saoedi-Arabië","2–1","Ryan Mendes"]]},"I":{"cities":"New York · Boston · Philadelphia · Toronto","conf":"m","teams":[{"n":"Frankrijk","p":9,"q":1},{"n":"Senegal","p":6,"q":2},{"n":"Noorwegen","p":3,"q":3},{"n":"Irak","p":0,"q":0}],"m":[["Frankrijk","Senegal","2–1","Kylian Mbappé"],["Irak","Noorwegen","0–2","Erling Haaland"],["Frankrijk","Irak","2–1","Kylian Mbappé"],["Noorwegen","Senegal","1–2","Sadio Mané"],["Noorwegen","Frankrijk","1–2","Erling Haaland"],["Senegal","Irak","2–0","Sadio Mané"]]},"J":{"cities":"Dallas · San Francisco · Kansas City","conf":"m","teams":[{"n":"Argentinië","p":9,"q":1},{"n":"Oostenrijk","p":6,"q":2},{"n":"Algerije","p":3,"q":3},{"n":"Jordanië","p":0,"q":0}],"m":[["Argentinië","Algerije","2–1","Lautaro Martínez"],["Oostenrijk","Jordanië","2–0","Marko Arnautović"],["Argentinië","Oostenrijk","2–1","Lautaro Martínez"],["Jordanië","Algerije","1–2","Mohamed Amoura"],["Jordanië","Argentinië","0–2","Lionel Messi"],["Algerije","Oostenrijk","1–2","Marko Arnautović"]]},"K":{"cities":"Mexico-Stad · Guadalajara · Houston · Miami","conf":"h","teams":[{"n":"Portugal","p":9,"q":1},{"n":"Colombia","p":6,"q":2},{"n":"DR Congo","p":3,"q":3},{"n":"Oezbekistan","p":0,"q":0}],"m":[["Portugal","DR Congo","2–1","Cristiano Ronaldo"],["Oezbekistan","Colombia","0–2","Luis Díaz"],["Portugal","Oezbekistan","2–0","Cristiano Ronaldo"],["Colombia","DR Congo","2–1","Luis Díaz"],["Colombia","Portugal","1–2","Bruno Fernandes"],["DR Congo","Oezbekistan","1–0","Cédric Bakambu"]]},"L":{"cities":"Dallas · Boston · Toronto · New York","conf":"h","teams":[{"n":"Engeland","p":9,"q":1},{"n":"Kroatië","p":6,"q":2},{"n":"Ghana","p":3,"q":0},{"n":"Panama","p":0,"q":0}],"m":[["Engeland","Kroatië","2–1","Harry Kane"],["Ghana","Panama","2–1","Jordan Ayew"],["Engeland","Ghana","2–1","Harry Kane"],["Panama","Kroatië","0–2","Andrej Kramarić"],["Panama","Engeland","0–2","Bukayo Saka"],["Kroatië","Ghana","2–1","Andrej Kramarić"]]}};
 const confTxt={h:"Hoog",m:"Middel"};
 const matchDates={A:[11,11,18,18,24,24],B:[12,13,18,18,24,24],C:[13,13,19,19,24,24],D:[12,14,19,19,25,25],
   E:[14,14,20,20,25,25],F:[14,14,20,20,25,25],G:[15,15,21,21,26,26],H:[15,15,21,21,26,26],
   I:[16,16,22,22,26,26],J:[16,16,22,22,27,27],K:[17,17,23,23,27,27],L:[17,17,23,23,27,27]};
-const played=[
-  ["Mexico – Zuid-Afrika","2–0","2–0","exact"],["Zuid-Korea – Tsjechië","2–1","2–1","exact"],
-  ["Canada – Bosnië-Herz.","2–1","1–1","mis"],["Qatar – Zwitserland","0–2","1–1","mis"],
-  ["Verenigde Staten – Paraguay","1–1","4–1","mis"],["Australië – Turkije","0–2","2–0","mis"],
-  ["Brazilië – Marokko","2–1","1–1","mis"],["Haïti – Schotland","0–2","0–1","goed"]];
-const news=[
-  "Oranje stelt teleur: 2–2 tegen Japan in de opener.",
-  "Zweden walst over Tunesië (5–1) en leidt groep F.",
-  "Ivoorkust klopt Ecuador 1–0 (Amad Diallo, 90e min).",
-  "Vandaag groep G & H: o.a. Spanje–Kaapverdië en België–Egypte."];
-const changes=[
-  ["14 jun","<b>Groep D:</b> Australië → kandidaat 2e plek (2–0 vs Turkije); Turkije zakt van mijn nr. 2."],
-  ["14 jun","<b>Groep C:</b> Schotland omhoog (3 ptn, koploper); Brazilië &amp; Marokko morsten punten."],
-  ["14 jun","<b>Groep B:</b> helemaal open — alle 4 op 1 punt."],
-  ["14 jun","Schorsingen: Mexico mist César Montes; Zuid-Afrika mist Sithole &amp; Zwane (rode kaarten)."],
-  ["14 jun","<b>Groep D herzien:</b> Australië → 2e (2–0 vs Turkije), Turkije → 3e (beste-3e), Paraguay valt af."],
-  ["14 jun","<b>Groep C herzien:</b> Brazilië 1e &amp; Marokko 2e herstellen na onderling 1–1; Schotland blijft 3e (beste-3e)."],
-  ["14 jun","<b>Knock-out bijgewerkt:</b> 2D=Australië, 3D=Turkije → M74 Duitsland–Turkije, M88 Australië–Egypte, M95 Argentinië–Australië."],
-  ["14 jun 21:00","Duitsland–Curaçao 7–1 (voorspeld 3–0 — uitslag goed). Geen gevolg voor doorgang: groep E ongewijzigd, Duitsland 1e."],
-  ["14 jun 22:00","<b>Strategie-herijking (exact-zware poule):</b> blow-outs (3–0/3–1) teruggebracht naar gangbare scores → hogere kans op exact."],
-  ["15 jun","<b>Groep F:</b> Oranje 2–2 vs Japan (mis, ik had 2–1), Zweden 5–1 vs Tunesië. Eindprognose blijft NL 1e/Japan 2e/Zweden 3e, maar Oranje móet nu winnen van Zweden + Tunesië."],
-  ["15 jun","<b>Groep E:</b> Ivoorkust 1–0 Ecuador (mis, ik had Ecuador). Ivoorkust nu 2e, Ecuador 3e (gewisseld). Knock-out: M78 Senegal–Ivoorkust, M81 VS–Ecuador."]];
+const played=[["Mexico – Zuid-Afrika","2–0","2–0","exact"],["Zuid-Korea – Tsjechië","2–1","2–1","exact"],["Canada – Bosnië-Herz.","1–1","1–1","exact"],["Qatar – Zwitserland","1–1","1–1","exact"],["Brazilië – Marokko","1–1","1–1","exact"],["Haïti – Schotland","0–1","0–1","exact"],["Verenigde Staten – Paraguay","4–1","4–1","exact"],["Australië – Turkije","2–0","2–0","exact"],["Duitsland – Curaçao","7–1","—","—"],["Ivoorkust – Ecuador","1–0","—","—"],["Nederland – Japan","2–2","—","—"],["Zweden – Tunesië","5–1","—","—"],["België – Egypte","1–1","2–1","mis"],["Iran – Nieuw-Zeeland","2–2","1–0","mis"],["Spanje – Kaapverdië","0–0","2–0","mis"],["Saoedi-Arabië – Uruguay","1–1","1–2","mis"]];
+const news=["Spanje stelt teleur: 0–0 tegen debutant Kaapverdië in groep H.","Duitsland walst over Curaçao (7–1); Ivoorkust klopt Ecuador 1–0.","Groep G volledig open: België–Egypte 1–1 én Iran–Nieuw-Zeeland 2–2 — alle vier op 1 punt.","Saoedi-Arabië pakt een punt tegen Uruguay (1–1).","Vandaag starten groepen I & J: Frankrijk–Senegal en Argentinië–Algerije."];
+const changes=[["14 jun","<b>Groep D:</b> Australië → kandidaat 2e plek (2–0 vs Turkije); Turkije zakt van mijn nr. 2."],["14 jun","<b>Groep C:</b> Schotland omhoog (3 ptn, koploper); Brazilië &amp; Marokko morsten punten."],["14 jun","<b>Groep B:</b> helemaal open — alle 4 op 1 punt."],["14 jun","Schorsingen: Mexico mist César Montes; Zuid-Afrika mist Sithole &amp; Zwane (rode kaarten)."],["14 jun","<b>Groep D herzien:</b> Australië → 2e (2–0 vs Turkije), Turkije → 3e (beste-3e), Paraguay valt af."],["14 jun","<b>Groep C herzien:</b> Brazilië 1e &amp; Marokko 2e herstellen na onderling 1–1; Schotland blijft 3e (beste-3e)."],["14 jun","<b>Knock-out bijgewerkt:</b> 2D=Australië, 3D=Turkije → M74 Duitsland–Turkije, M88 Australië–Egypte, M95 Argentinië–Australië."],["14 jun 21:00","Duitsland–Curaçao 7–1 (voorspeld 3–0 — uitslag goed). Geen gevolg voor doorgang: groep E ongewijzigd, Duitsland 1e."],["14 jun 22:00","<b>Strategie-herijking (exact-zware poule):</b> blow-outs (3–0/3–1) teruggebracht naar gangbare scores → hogere kans op exact."],["15 jun","<b>Groep F:</b> Oranje 2–2 vs Japan (mis, ik had 2–1), Zweden 5–1 vs Tunesië. Eindprognose blijft NL 1e/Japan 2e/Zweden 3e, maar Oranje móet nu winnen van Zweden + Tunesië."],["15 jun","<b>Groep E:</b> Ivoorkust 1–0 Ecuador (mis, ik had Ecuador). Ivoorkust nu 2e, Ecuador 3e (gewisseld). Knock-out: M78 Senegal–Ivoorkust, M81 VS–Ecuador."],["16 jun","<b>Groep G:</b> echte uitslagen verwerkt — België–Egypte 1–1 en Iran–Nieuw-Zeeland 2–2. Groep ligt volledig open (alle vier 1 punt); voorspelde winnaar België iets teruggeschroefd."],["16 jun","<b>Groep H:</b> Spanje morst punten (0–0 vs Kaapverdië) en Saoedi-Arabië–Uruguay 1–1. Titelfavoriet begint stroef; voorspelde eindpunten verlaagd, blijft groepsfavoriet."],["16 jun","<b>Speelronde 1 compleet (A–H):</b> 16 duels verwerkt; voorspellingen A–D waren 8/8 exact. Eerder foutief opgeslagen uitslagen voor groep B/C/D gecorrigeerd naar de officiële standen."],["16 jun","<b>Vandaag:</b> groepen I & J openen (Frankrijk–Senegal, Argentinië–Algerije). Knock-outbracket nog ongewijzigd — groepswinnaars nog niet beslist."]];
 const odds=[["Spanje",16],["Frankrijk",15],["Engeland",11],["Argentinië",9.5],["Portugal",9],["Brazilië",8],["Duitsland",5.5],["Nederland",4],["Noorwegen",3],["België",2.3]];
 const I=(id,c)=>`<svg class="${c||'ico'}"><use href="#${id}"></use></svg>`;
 
